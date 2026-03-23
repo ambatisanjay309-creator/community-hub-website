@@ -472,14 +472,13 @@
 <script src="main.js"></script>
 <script>
   // Handle ?filter= param from category links on homepage
-  (function () {
+  window.addEventListener('DOMContentLoaded', function () {
     const params = new URLSearchParams(window.location.search);
     const filter = params.get('filter');
     if (filter) {
       const btn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
       if (btn) btn.click();
     }
-  })();
+  });
 </script>
-</body>
 </html>
