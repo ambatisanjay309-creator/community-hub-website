@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Featured Resources — Apex Community Hub</title>
+  <meta name="description" content="Spotlight on the most essential organizations serving the Apex and Wake County community—WakeMed, Wake County Libraries, Apex Police, and more." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html" aria-label="Apex Community Hub home">
+        <div class="logo-icon" aria-hidden="true">🏛</div>
+        <div>
+          <span class="logo-text">Apex Community Hub</span>
+          <span class="logo-sub">Apex &amp; Wake County, NC</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Resources</a></li>
+        <li><a href="featured.html" class="active">Featured</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="brief.html">Design Brief</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="submit.html" class="nav-cta">Submit a Resource</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="directory.html">Resources</a>
+    <a href="featured.html">Featured</a>
+    <a href="about.html">About</a>
+    <a href="brief.html">Design Brief</a>
+    <a href="references.html">References</a>
+    <a href="submit.html">Submit a Resource</a>
+  </nav>
+</header>
+
+<!-- ══════════════ FEATURED HERO ══════════════ -->
+<section class="featured-hero">
+  <div class="container">
+    <span class="label" style="color:rgba(255,255,255,.7);">Featured Resources</span>
+    <h1>Essential Organizations in Our Community</h1>
+    <p>These are the services our team identified as most critical for Apex and Wake County residents. Whether you're a student, a new family, a senior, or a long-time neighbor—these organizations are here for you.</p>
+  </div>
+</section>
+
+<!-- ══════════════ FEATURED CONTENT ══════════════ -->
+<section class="section">
+  <div class="container">
+
+    <!-- Featured 1: WakeMed -->
+    <article class="featured-card reveal" id="wakemed">
+      <div class="featured-img-panel" aria-hidden="true" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">
+        <img class="panel-photo" data-src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&q=75&auto=format&fit=crop" alt="Hospital exterior at night" loading="lazy" />
+        <span class="panel-emoji">🏥</span>
+      </div>
+      <div class="featured-content">
+        <span class="label">Health &amp; Wellness · Featured Resource</span>
+        <h2>WakeMed Health &amp; Hospitals</h2>
+        <p>WakeMed is Wake County's premier health system and one of the most important institutions in the region. Founded in Raleigh in 1961, it has grown into a comprehensive network serving over one million people with emergency care, specialty medicine, pediatrics, heart surgery, cancer treatment, and outpatient clinics throughout the county.</p>
+        <p>For Apex residents, the WakeMed Cary Hospital on Kildaire Farm Road is the closest major facility—just minutes from downtown Apex. WakeMed also operates urgent care clinics and outpatient labs across Southwest Wake County, making quality care accessible close to home.</p>
+        <ul class="benefit-list">
+          <li>24/7 Emergency Department at Raleigh and Cary campuses</li>
+          <li>WakeMed Children's Hospital for pediatric emergencies and specialty care</li>
+          <li>Heart &amp; Vascular services, a nationally recognized program</li>
+          <li>Women's Pavilion and maternity care for families</li>
+          <li>Financial assistance programs for uninsured and underinsured patients</li>
+          <li>Community health education and free screenings</li>
+        </ul>
+        <p><strong>Why it's essential:</strong> In any medical emergency, WakeMed is the first call. Their financial assistance programs also ensure that cost is never a reason to avoid care.</p>
+        <div class="who-benefits">
+          <span class="who-tag">Families</span>
+          <span class="who-tag">Seniors</span>
+          <span class="who-tag">Children</span>
+          <span class="who-tag">Uninsured Residents</span>
+          <span class="who-tag">All Community Members</span>
+        </div>
+        <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a href="https://www.wakemed.org" target="_blank" rel="noopener" class="btn btn-primary">Visit WakeMed.org ↗</a>
+          <a href="directory.html?filter=health" class="btn btn-outline">More Health Resources</a>
+        </div>
+        <p style="font-size:.8rem;margin-top:.75rem;color:var(--gray-500);">📍 WakeMed Cary: 1900 Kildaire Farm Rd, Cary, NC 27518 · (919) 350-8000</p>
+      </div>
+    </article>
+
+    <!-- Featured 2: Wake County Libraries -->
+    <article class="featured-card reverse reveal" id="libraries">
+      <div class="featured-img-panel" aria-hidden="true" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">
+        <img class="panel-photo" data-src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&q=75&auto=format&fit=crop" alt="Library interior with warm lighting and bookshelves" loading="lazy" />
+        <span class="panel-emoji">📚</span>
+      </div>
+      <div class="featured-content">
+        <span class="label">Education · Featured Resource</span>
+        <h2>Wake County Public Libraries</h2>
+        <p>The Wake County Public Library system is one of the most used and trusted public institutions in our community. With over 20 branches countywide—including the Apex branch on West Beaver Creek Drive—it offers a staggering range of free services that benefit everyone from kindergarteners to senior citizens.</p>
+        <p>As students at Apex High School, our team uses the library regularly for research, study space, and digital resources like databases and e-books. For new community members, it's also a welcoming place to learn about Apex and connect with neighbors.</p>
+        <ul class="benefit-list">
+          <li>Free access to millions of books, audiobooks, eBooks, and DVDs</li>
+          <li>Homework Help program pairing students with volunteer tutors</li>
+          <li>Digital literacy classes for seniors and new technology users</li>
+          <li>English as a Second Language (ESL) resources for new residents</li>
+          <li>Free Wi-Fi and public computer access for job seekers</li>
+          <li>Story Time and early literacy programs for young children</li>
+          <li>Meeting rooms available to nonprofit and community groups</li>
+        </ul>
+        <p><strong>Why it's essential:</strong> The library is one of the few truly free, open-to-all community spaces. It bridges the digital divide and supports lifelong learning for every age.</p>
+        <div class="who-benefits">
+          <span class="who-tag">Students</span>
+          <span class="who-tag">Young Children</span>
+          <span class="who-tag">Seniors</span>
+          <span class="who-tag">Job Seekers</span>
+          <span class="who-tag">New Residents</span>
+        </div>
+        <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a href="https://www.wake.gov/departments-government/libraries" target="_blank" rel="noopener" class="btn btn-primary">Visit Wake Libraries ↗</a>
+          <a href="directory.html?filter=education" class="btn btn-outline">More Education Resources</a>
+        </div>
+        <p style="font-size:.8rem;margin-top:.75rem;color:var(--gray-500);">📍 Apex Branch: 1340 West Beaver Creek Dr, Apex, NC 27502 · (919) 250-1200</p>
+      </div>
+    </article>
+
+    <!-- Featured 3: Apex Police -->
+    <article class="featured-card reveal" id="police">
+      <div class="featured-img-panel" aria-hidden="true" style="background:linear-gradient(135deg,#fee2e2,#fecaca);">
+        <img class="panel-photo" data-src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=800&q=75&auto=format&fit=crop" alt="Police car in neighborhood" loading="lazy" />
+        <span class="panel-emoji">🛡️</span>
+      </div>
+      <div class="featured-content">
+        <span class="label">Safety &amp; Emergency · Featured Resource</span>
+        <h2>Apex Police Department</h2>
+        <p>The Apex Police Department has been recognized nationally as a model for community-oriented policing. Unlike many departments, Apex PD emphasizes neighborhood partnerships, proactive engagement, and prevention programs alongside traditional law enforcement. As Apex has grown from a small town into one of the fastest-growing municipalities in North Carolina, the department has scaled its services to match.</p>
+        <p>Apex PD's school resource officers (SROs) are assigned to every Apex school—including Apex High—building positive relationships with students and providing a trusted point of contact for safety concerns.</p>
+        <ul class="benefit-list">
+          <li>24/7 emergency response throughout the Town of Apex</li>
+          <li>Community Crime Prevention Unit with free home security assessments</li>
+          <li>School Resource Officers at every Apex public school</li>
+          <li>Neighborhood Watch coordination and training</li>
+          <li>Citizens Police Academy for community members interested in policing</li>
+          <li>Child safety seat installation and inspection program</li>
+          <li>Senior citizen outreach and fraud prevention programs</li>
+        </ul>
+        <p><strong>Why it's essential:</strong> Public safety is the foundation of a healthy community. The Apex PD's community programs extend well beyond emergency response, building trust and proactive safety awareness throughout town.</p>
+        <div class="who-benefits">
+          <span class="who-tag">All Residents</span>
+          <span class="who-tag">High Schoolers</span>
+          <span class="who-tag">Families</span>
+          <span class="who-tag">Seniors</span>
+          <span class="who-tag">New Neighbors</span>
+        </div>
+        <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a href="https://www.apexnc.org/261/Police-Department" target="_blank" rel="noopener" class="btn btn-primary">Visit Apex PD ↗</a>
+          <a href="directory.html?filter=safety" class="btn btn-outline">More Safety Resources</a>
+        </div>
+        <p style="font-size:.8rem;margin-top:.75rem;color:var(--gray-500);">📍 53 Hunter Street, Apex, NC 27502 · Non-emergency: (919) 362-8661</p>
+      </div>
+    </article>
+
+    <!-- Featured 4: NC 211 -->
+    <article class="featured-card reverse reveal" id="nc211">
+      <div class="featured-img-panel" aria-hidden="true" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">
+        <img class="panel-photo" data-src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=75&auto=format&fit=crop" alt="Community volunteers helping neighbors" loading="lazy" />
+        <span class="panel-emoji">🤝</span>
+      </div>
+      <div class="featured-content">
+        <span class="label">Social Services · Featured Resource</span>
+        <h2>NC 211 — Your Connection to Help</h2>
+        <p>NC 211 is one of the most important—and underutilized—services available to Wake County residents. By simply dialing 2-1-1 (available 24 hours a day, 7 days a week, free of charge), any resident can be connected to a trained specialist who will help identify and locate the exact services they need, whether that's emergency food, rental assistance, mental health support, childcare, or dozens of other needs.</p>
+        <p>For new Apex residents who aren't familiar with the local service landscape, or for anyone going through a difficult moment, 211 is the single most efficient starting point. The database contains over 10,000 nonprofit, government, and community programs across North Carolina.</p>
+        <ul class="benefit-list">
+          <li>Free, confidential, available in multiple languages 24/7</li>
+          <li>Connects callers to food banks, pantries, and meal programs</li>
+          <li>Rental and utility assistance referrals</li>
+          <li>Mental health and crisis line connections</li>
+          <li>Childcare and early education referrals</li>
+          <li>Domestic violence and shelter resources</li>
+          <li>Veteran services and disability assistance navigation</li>
+        </ul>
+        <p><strong>Why it's essential:</strong> Nobody should have to Google their way through a crisis. NC 211 puts a knowledgeable human being between a resident in need and the exact help available in their area. It is free, fast, and life-changing.</p>
+        <div class="who-benefits">
+          <span class="who-tag">Families in Need</span>
+          <span class="who-tag">Seniors</span>
+          <span class="who-tag">New Residents</span>
+          <span class="who-tag">Veterans</span>
+          <span class="who-tag">Anyone in Crisis</span>
+        </div>
+        <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a href="https://www.nc211.org" target="_blank" rel="noopener" class="btn btn-primary">Visit NC211.org ↗</a>
+          <a href="directory.html?filter=social" class="btn btn-outline">More Social Services</a>
+        </div>
+        <p style="font-size:.8rem;margin-top:.75rem;color:var(--gray-500);">📞 Dial 2-1-1 (free, 24/7) · Online: nc211.org</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ══════════════ CTA STRIP ══════════════ -->
+<section class="section section-alt" style="text-align:center;">
+  <div class="container">
+    <h2>Explore the full directory</h2>
+    <p style="max-width:520px;margin:.75rem auto 2rem;">Browse all 12+ verified local resources organized by category, or submit a resource you think we should add.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="directory.html" class="btn btn-primary">Full Resource Directory</a>
+      <a href="submit.html" class="btn btn-outline">Submit a Resource</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="margin-bottom:.75rem;">
+          <div class="logo-icon" aria-hidden="true">🏛</div>
+          <div>
+            <span class="logo-text">Apex Community Hub</span>
+            <span class="logo-sub" style="color:rgba(255,255,255,.5);">Apex &amp; Wake County, NC</span>
+          </div>
+        </a>
+        <p>A community resource directory created by students at Apex High School for the 2025 TSA Webmaster competition.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Resource Directory</a>
+        <a href="featured.html">Featured Resources</a>
+        <a href="submit.html">Submit a Resource</a>
+        <a href="about.html">About the Team</a>
+        <a href="brief.html">Design Brief</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="directory.html?filter=safety">Safety &amp; Emergency</a>
+        <a href="directory.html?filter=education">Education</a>
+        <a href="directory.html?filter=health">Health &amp; Wellness</a>
+        <a href="directory.html?filter=transport">Transportation</a>
+        <a href="directory.html?filter=youth">Youth Programs</a>
+        <a href="directory.html?filter=social">Social Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Local Government</h4>
+        <a href="https://www.apexnc.org" target="_blank" rel="noopener">Town of Apex</a>
+        <a href="https://www.wake.gov" target="_blank" rel="noopener">Wake County</a>
+        <a href="https://www.raleighnc.gov" target="_blank" rel="noopener">City of Raleigh</a>
+        <a href="https://www.townofcary.org" target="_blank" rel="noopener">Town of Cary</a>
+        <a href="https://www.ncdhhs.gov" target="_blank" rel="noopener">NC DHHS</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Apex Community Hub · Apex High School TSA Webmaster Team</span>
+      <span>Created for the NC TSA State Leadership Conference · <a href="brief.html">Design Brief</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
