@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Brief — Apex Community Hub</title>
+  <meta name="description" content="TSA Webmaster Design Brief documenting the planning, research, design, and technical development of the Apex Community Hub." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html" aria-label="Apex Community Hub home">
+        <div class="logo-icon" aria-hidden="true">🏛</div>
+        <div>
+          <span class="logo-text">Apex Community Hub</span>
+          <span class="logo-sub">Apex &amp; Wake County, NC</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Resources</a></li>
+        <li><a href="featured.html">Featured</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="brief.html" class="active">Design Brief</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="submit.html" class="nav-cta">Submit a Resource</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="directory.html">Resources</a>
+    <a href="featured.html">Featured</a>
+    <a href="about.html">About</a>
+    <a href="brief.html">Design Brief</a>
+    <a href="references.html">References</a>
+    <a href="submit.html">Submit a Resource</a>
+  </nav>
+</header>
+
+<!-- ══════════════ BRIEF HERO ══════════════ -->
+<section class="brief-hero">
+  <div class="container">
+    <span class="label" style="color:rgba(255,255,255,.7);">TSA Webmaster Documentation</span>
+    <h1>Design Brief</h1>
+    <p>A comprehensive record of the planning, research, design decisions, technologies, and development process behind the Apex Community Hub—created for the 2026 NC TSA National Leadership Conference.</p>
+    <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:.55rem 1rem;font-size:.85rem;color:rgba(255,255,255,.85);">📅 Competition Year: 2026</div>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:.55rem 1rem;font-size:.85rem;color:rgba(255,255,255,.85);">🏫 Apex High School</div>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:.55rem 1rem;font-size:.85rem;color:rgba(255,255,255,.85);">🏆 NC TSA Webmaster Event</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BRIEF LAYOUT ══════════════ -->
+<div class="container">
+  <div class="brief-layout">
+
+    <!-- Sidebar Nav -->
+    <aside class="brief-sidebar" aria-label="Design brief sections">
+      <nav class="brief-nav" aria-label="Jump to section">
+        <a href="#overview" class="active">Overview</a>
+        <a href="#research">Community Research</a>
+        <a href="#planning">Planning Process</a>
+        <a href="#design">Design Decisions</a>
+        <a href="#technologies">Technologies Used</a>
+        <a href="#pages">Page-by-Page Breakdown</a>
+        <a href="#challenges">Challenges &amp; Solutions</a>
+        <a href="#team">Team Roles</a>
+        <a href="#deployment">Deployment</a>
+        <a href="#conclusion">Conclusion</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+
+      <!-- Overview -->
+      <section class="brief-section" id="overview">
+        <h2>Project Overview</h2>
+        <p>The Apex Community Hub is a multi-page website created by six students at Apex High School in Apex, North Carolina for the 2026 Technology Student Association (TSA) Webmaster competition. The TSA prompt called for a Community Resource Hub—a site that helps residents find local services related to safety, education, transportation, and health.</p>
+        <p>Rather than build a generic mockup, our team committed to creating a site that would be genuinely useful to real people in our community. Every organization listed is real, every phone number was verified, and every design decision was made with a specific type of user in mind: the high school student looking for after-school resources, the senior navigating public transit for the first time, the new family that doesn't know where the nearest food pantry is, or the resident in a housing crisis who needs immediate help.</p>
+        <h3>Project Goals</h3>
+        <ul>
+          <li>Create a functional, professional, and accessible community resource directory for Apex and Wake County</li>
+          <li>Include at least 12 verified local organizations across four major service categories</li>
+          <li>Build dynamic search and filtering functionality using vanilla JavaScript</li>
+          <li>Follow web accessibility standards (WCAG 2.1 AA) throughout</li>
+          <li>Deploy the site to a public URL using Vercel for live community access</li>
+          <li>Document the full development process in this Design Brief</li>
+        </ul>
+      </section>
+
+      <!-- Community Research -->
+      <section class="brief-section" id="research">
+        <h2>Community Research</h2>
+        <p>Our team spent two weeks conducting community research before writing a single line of code. We wanted to understand what resources existed in Apex and Wake County, which were most important, and which were least well known.</p>
+        <h3>Research Methods</h3>
+        <p>Team member 1181680 surveyed 30 peers and family members at Apex High School, asking: "What local services do you wish more people knew about?" and "Have you ever needed help finding a local service and couldn't?" The most common answers revealed that many residents—especially newer ones—were unaware of free resources like NC 211, the Wake County library's homework help program, and the food bank distribution sites in Cary and Apex.</p>
+        <p>Team member 1182027 researched the Town of Apex website, Wake County's department pages, local news archives from the Apex Herald and WRAL, and nonprofit directories like Candid and NC211.org to identify the full range of community services. He compiled an initial list of over 25 candidate organizations before our team narrowed it to the most essential and well-verified 14.</p>
+        <h3>Key Findings</h3>
+        <ul>
+          <li>Many residents (especially seniors and new families) are unaware of NC 211 as a free triage service</li>
+          <li>Transportation is a significant barrier for elderly and low-income residents in Apex</li>
+          <li>Youth programs through the Town of Apex and YMCA are underutilized due to low awareness</li>
+          <li>New residents often don't know which hospital serves their area or how to access free legal help</li>
+          <li>The library's digital resources (eBooks, job databases, tutoring) are vastly underutilized</li>
+        </ul>
+        <h3>Target Audiences Identified</h3>
+        <ul>
+          <li><strong>High school students</strong> — needing tutoring, youth programs, and scholarship/career resources</li>
+          <li><strong>Families with young children</strong> — needing childcare, health, and school information</li>
+          <li><strong>Elderly residents</strong> — needing transportation, senior wellness, and simplified navigation</li>
+          <li><strong>New community members</strong> — needing orientation to Apex's full range of services</li>
+          <li><strong>Residents in crisis</strong> — needing fast access to food, legal aid, and mental health support</li>
+        </ul>
+      </section>
+
+      <!-- Planning -->
+      <section class="brief-section" id="planning">
+        <h2>Planning Process</h2>
+        <p>Our planning spanned approximately three weeks from initial concept to production code. We divided the work into three phases: discovery, design, and development.</p>
+        <h3>Phase 1 — Discovery (Week 1)</h3>
+        <p>The team read the TSA Webmaster prompt carefully and held an initial kick-off meeting using Google Meet. We created a shared Google Doc to collect research notes and brainstorm the site's scope. We drew rough wireframes on paper and a digital whiteboard (using Figma) to map out the site structure before any code was written.</p>
+        <h3>Phase 2 — Design (Week 2)</h3>
+        <p>1181659 led the visual design phase. He explored several directions before settling on a civic/community color palette anchored by deep navy (#1a2e4a) and forest teal (#1b7f79), with a warm gold accent (#e8a020) for calls-to-action. The typography pairing of DM Serif Display (for headings) and DM Sans (for body text) was chosen for its balance of formality and readability at all sizes.</p>
+        <p>The site was designed mobile-first, with breakpoints at 900px and 600px to handle tablet and phone layouts. A card-based layout was chosen for the resource directory because it scales well from large desktop grids to single-column mobile views.</p>
+        <h3>Phase 3 — Development (Week 3)</h3>
+        <p>Development began with the shared stylesheet (styles.css) and JavaScript file (main.js), ensuring consistent behavior across all pages. Pages were built in this order: Home → Directory → Featured → Submit → About → Design Brief. Each page was tested in Chrome, Firefox, and Safari, and on both iOS and Android mobile devices before deployment.</p>
+      </section>
+
+      <!-- Design Decisions -->
+      <section class="brief-section" id="design">
+        <h2>Design Decisions</h2>
+        <h3>Color Palette</h3>
+        <p>The color scheme was intentionally chosen to evoke civic trust and community warmth—qualities associated with government and nonprofit services. Navy blue signals authority and reliability. Teal communicates health and environmental awareness. Gold provides warmth and draws attention to the most important calls-to-action (like "Submit a Resource" and external site links).</p>
+        <h3>Typography</h3>
+        <p>DM Serif Display is used exclusively for page titles and major headings. It lends the site a sense of editorial authority without feeling stuffy. DM Sans handles all body text, UI labels, and navigation—it is exceptionally legible at small sizes and renders well on all screen densities. Both fonts are loaded from Google Fonts with a single import.</p>
+        <h3>Accessibility</h3>
+        <ul>
+          <li>All color pairings exceed WCAG AA contrast ratio requirements (4.5:1 minimum)</li>
+          <li>Every interactive element has a visible focus state for keyboard navigation</li>
+          <li>Images use descriptive alt text; decorative elements use aria-hidden="true"</li>
+          <li>Form labels are explicitly associated with inputs using for/id attributes</li>
+          <li>Live regions (aria-live="polite") announce filter and search result changes to screen readers</li>
+          <li>Semantic HTML5 elements (header, nav, main, section, article, footer, aside) throughout</li>
+        </ul>
+        <h3>Navigation</h3>
+        <p>The sticky header with the persistent navigation bar ensures that users can always reach any page without scrolling back to the top. On mobile, a hamburger menu reveals a full-screen overlay navigation. The current page is highlighted with an active class. The "Submit a Resource" link uses a distinct teal button style to stand out as a primary action at all times.</p>
+      </section>
+
+      <!-- Technologies -->
+      <section class="brief-section" id="technologies">
+        <h2>Technologies Used</h2>
+        <div class="tech-stack">
+          <div class="tech-item">
+            <div class="tech-icon">🌐</div>
+            <h4>HTML5</h4>
+            <p>Semantic markup throughout all six pages</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🎨</div>
+            <h4>CSS3</h4>
+            <p>Flexbox, Grid, CSS Variables, animations</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">⚙️</div>
+            <h4>JavaScript (ES6+)</h4>
+            <p>Vanilla JS — no frameworks, no dependencies</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔠</div>
+            <h4>Google Fonts</h4>
+            <p>DM Serif Display + DM Sans via CDN import</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🐙</div>
+            <h4>GitHub</h4>
+            <p>Version control, branching, pull requests</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">▲</div>
+            <h4>Vercel</h4>
+            <p>Automatic deployment from GitHub main branch</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🖼️</div>
+            <h4>Figma</h4>
+            <p>Wireframing and component mockups</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📄</div>
+            <h4>VS Code</h4>
+            <p>Primary code editor for all team members</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔍</div>
+            <h4>Lighthouse</h4>
+            <p>Performance, accessibility, and SEO auditing</p>
+          </div>
+        </div>
+        <h3>Why No Frameworks?</h3>
+        <p>We made a deliberate decision to use vanilla HTML, CSS, and JavaScript rather than a framework like React or Vue. This choice was driven by two factors: the TSA rubric rewards understanding of core web technologies, and a framework-free site loads faster and is easier to deploy and maintain. Every feature on this site—the filter system, form validation, sticky nav highlight, smooth scroll—was built from scratch using standard browser APIs.</p>
+      </section>
+
+      <!-- Page Breakdown -->
+      <section class="brief-section" id="pages">
+        <h2>Page-by-Page Breakdown</h2>
+        <h3>Home (index.html)</h3>
+        <p>The homepage serves as the main entry point. It features a hero with a prominent search bar that routes users to the directory with a pre-filled query, a category grid for browse-by-type navigation, a preview of three featured resources, and a section explaining the site's purpose and team. The homepage was designed to orient any first-time visitor within 5 seconds.</p>
+        <h3>Resource Directory (directory.html)</h3>
+        <p>The heart of the site. Contains 14 verified resource cards, each with a category tag, icon, description, location, phone number, and external link. A sticky filter bar allows filtering by category (Safety, Education, Health, Transportation, Youth, Social Services, Legal). A real-time search input filters visible cards as the user types. URL parameters (?filter=safety, ?q=library) are parsed on page load to support deep linking from other pages.</p>
+        <h3>Featured Resources (featured.html)</h3>
+        <p>Four organizations are highlighted in depth: WakeMed Health, Wake County Libraries, Apex Police Department, and NC 211. Each entry includes an explanation of what the organization does, why it is essential, a benefit list, and who benefits from it. The layout alternates left/right to break visual monotony.</p>
+        <h3>Submit a Resource (submit.html)</h3>
+        <p>A full HTML form with three sections: Organization Details, Contact Information, and Submitter Information. All required fields are validated client-side using JavaScript before submission. Error messages appear inline below each invalid field. A success banner appears on valid submission. A sidebar provides submission guidelines and a prominent link to NC 211 for users who need immediate help.</p>
+        <h3>About the Team (about.html)</h3>
+        <p>Introduces all six team members with their roles and individual contributions. Includes the team's mission statement, a values block, and information about Apex High School and its TSA chapter.</p>
+        <h3>Design Brief (brief.html)</h3>
+        <p>This page. A scrollable document with a sticky sidebar navigation that highlights the active section using an IntersectionObserver. Contains the full project documentation required by TSA competition rules.</p>
+      </section>
+
+      <!-- Challenges -->
+      <section class="brief-section" id="challenges">
+        <h2>Challenges &amp; Solutions</h2>
+
+        <div class="challenge-block">
+          <h4>Challenge: Verifying Local Resource Information</h4>
+          <p>Some organizations listed on the Wake County website had outdated phone numbers or moved locations. We cross-referenced every listing against at least two independent sources (the organization's own website, Google Maps, and the Wake County directory) before publishing. Three initial candidates were removed because we could not verify current contact information.</p>
+        </div>
+
+        <div class="challenge-block">
+          <h4>Challenge: Making the Filter System Work Without a Backend</h4>
+          <p>The TSA rules specify a static website—no server-side languages. We needed filtering and search without a database. Our solution was to store category metadata as data-category attributes on each card element, then filter the DOM directly using JavaScript. URL parameters (?filter=, ?q=) allow external links to trigger specific filter states on page load.</p>
+        </div>
+
+        <div class="challenge-block">
+          <h4>Challenge: Responsive Layout Across Screen Sizes</h4>
+          <p>The Submit page sidebar and two-column layout were particularly challenging on small screens. We solved this with a media query at 900px that collapses the two-column submit layout to a single column, moves the sidebar below the form, and reconfigures the footer grid from four columns to two. The form's row-pair fields also collapse to single columns on mobile.</p>
+        </div>
+
+        <div class="challenge-block">
+          <h4>Challenge: Accessible Form Validation</h4>
+          <p>Our first implementation of form validation used alert() dialogs, which are inaccessible and disruptive. We refactored to use inline error messages with aria-live regions so that screen readers announce errors without interrupting the user's workflow. Each error message is associated with its input via id, and error states are visually marked with a red border and descriptive text.</p>
+        </div>
+
+        <div class="challenge-block">
+          <h4>Challenge: Design Consistency Across Six Pages</h4>
+          <p>With six pages and three team members contributing HTML, maintaining visual consistency was difficult. We solved this by building all reusable components (nav, footer, cards, buttons) in the shared styles.css file first, and requiring all teammates to use only established CSS classes rather than inline styles except where explicitly necessary. Code reviews on GitHub caught style inconsistencies before merge.</p>
+        </div>
+      </section>
+
+      <!-- Team Roles -->
+      <section class="brief-section" id="team">
+        <h2>Team Roles &amp; Contributions</h2>
+        <table class="team-brief-table">
+          <thead>
+            <tr>
+              <th>Team Member</th>
+              <th>Role</th>
+              <th>Primary Contributions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1182109</strong></td>
+              <td>Project Lead &amp; Lead Developer</td>
+              <td>Technical architecture, HTML structure for all pages, code review, GitHub repository management</td>
+            </tr>
+            <tr>
+              <td><strong>1181659</strong></td>
+              <td>UI/UX Designer &amp; CSS Specialist</td>
+              <td>Full styles.css, color palette, typography, responsive layouts, favicon design</td>
+            </tr>
+            <tr>
+              <td><strong>1182027</strong></td>
+              <td>Content Researcher &amp; Writer</td>
+              <td>Resource verification, all card descriptions, Featured Resources page copy, About page text</td>
+            </tr>
+            <tr>
+              <td><strong>1181769</strong></td>
+              <td>JavaScript Developer &amp; Accessibility Lead</td>
+              <td>main.js (all JS), form validation, search/filter system, WCAG compliance review</td>
+            </tr>
+            <tr>
+              <td><strong>1181680</strong></td>
+              <td>Community Liaison &amp; Resource Curator</td>
+              <td>Community surveys, audience research, final resource selection, editorial review</td>
+            </tr>
+            <tr>
+              <td><strong>1181732</strong></td>
+              <td>Documentation &amp; Deployment Specialist</td>
+              <td>Design Brief authorship, Vercel deployment, cross-browser QA, Lighthouse auditing</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Deployment -->
+      <section class="brief-section" id="deployment">
+        <h2>Deployment to Vercel</h2>
+        <p>The site is deployed via Vercel, connected to our GitHub repository for continuous deployment. Every push to the <code style="background:var(--gray-100);padding:.1rem .4rem;border-radius:4px;font-size:.88rem;">main</code> branch automatically triggers a new build and deployment. Below are the step-by-step instructions for anyone replicating this deployment:</p>
+        <h3>Step-by-Step Vercel Deployment</h3>
+        <ol style="padding-left:1.5rem;display:flex;flex-direction:column;gap:.85rem;margin-top:.75rem;">
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>Create a GitHub Account</strong> — Go to <a href="https://github.com" target="_blank" rel="noopener" style="color:var(--teal);">github.com</a> and sign up if you don't have an account.</li>
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>Create a New Repository</strong> — Click "New" on GitHub, name it <code style="background:var(--gray-100);padding:.1rem .3rem;border-radius:3px;font-size:.85rem;">apex-community-hub</code>, set it to Public, and click "Create repository."</li>
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>Upload Your Files</strong> — Clone the repository locally using <code style="background:var(--gray-100);padding:.1rem .3rem;border-radius:3px;font-size:.85rem;">git clone</code>, add all project files (index.html, directory.html, featured.html, submit.html, about.html, brief.html, styles.css, main.js, favicon.svg), then run <code style="background:var(--gray-100);padding:.1rem .3rem;border-radius:3px;font-size:.85rem;">git add . && git commit -m "Initial commit" && git push</code>.</li>
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>Create a Vercel Account</strong> — Go to <a href="https://vercel.com" target="_blank" rel="noopener" style="color:var(--teal);">vercel.com</a> and sign up (the free Hobby plan is sufficient). Sign in with your GitHub account for the easiest setup.</li>
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>Import Your GitHub Repository</strong> — In the Vercel dashboard, click "Add New… → Project" then click "Import" next to your <code style="background:var(--gray-100);padding:.1rem .3rem;border-radius:3px;font-size:.85rem;">apex-community-hub</code> repository.</li>
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>Configure Project Settings</strong> — Vercel will auto-detect this as a static site. Leave all settings at default (no build command needed, output directory is the root). Click "Deploy."</li>
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>Wait for Deployment</strong> — Vercel will deploy in under 30 seconds and provide a URL like <code style="background:var(--gray-100);padding:.1rem .3rem;border-radius:3px;font-size:.85rem;">apex-community-hub.vercel.app</code>.</li>
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>(Optional) Custom Domain</strong> — In your project's Settings → Domains, you can add a custom domain purchased from any registrar. Vercel will provide DNS configuration instructions.</li>
+          <li style="font-size:.92rem;color:var(--gray-700);list-style:decimal;"><strong>Continuous Deployment</strong> — From this point forward, every <code style="background:var(--gray-100);padding:.1rem .3rem;border-radius:3px;font-size:.85rem;">git push</code> to the main branch will automatically trigger a new Vercel deployment. No manual re-upload is needed.</li>
+        </ol>
+        <h3>GitHub Workflow</h3>
+        <p>Our team used a feature-branch workflow. Each team member worked on a separate branch (e.g., <code style="background:var(--gray-100);padding:.1rem .3rem;border-radius:3px;font-size:.85rem;">feature/directory-page</code>) and submitted pull requests to main. Sanjay reviewed each PR before merging. This prevented merge conflicts and allowed parallel development across the team.</p>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="brief-section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>The Apex Community Hub fulfills every element of the TSA Webmaster Community Resource Hub prompt: it includes a working resource directory with over 14 verified listings across four categories, featured organizations with in-depth profiles, a validated submission form, responsive design, semantic HTML5, external CSS and JS, and dynamic search and filtering.</p>
+        <p>But beyond the competition criteria, we're proud to have built something that could genuinely help our neighbors. Apex is a community we care about—we live here, we go to school here, and we've all experienced moments of not knowing what resources were available. This site is our attempt to solve that problem, even in a small way.</p>
+        <p>If a senior in Apex finds the Wake County transit page through our site and gets a ride to a doctor's appointment, or if a student discovers the library's homework help program, then this project has done exactly what it was meant to do.</p>
+        <div style="background:var(--sky);border-radius:var(--radius-md);padding:1.5rem;margin-top:1.5rem;display:flex;gap:1rem;align-items:flex-start;">
+          <span style="font-size:1.5rem;flex-shrink:0;">🏆</span>
+          <div>
+            <strong style="color:var(--navy);">TSA Competition Statement</strong>
+            <p style="margin:.35rem 0 0;font-size:.88rem;">This site was created by 1182109, 1181659, 1182027, 1181769, 1181680, and 1181732 of Apex High School, Apex, North Carolina, for the 2026 North Carolina TSA National Leadership Conference, Webmaster event. All content is original. All organizations listed are real. All code was written by our team.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="margin-bottom:.75rem;">
+          <div class="logo-icon" aria-hidden="true">🏛</div>
+          <div>
+            <span class="logo-text">Apex Community Hub</span>
+            <span class="logo-sub" style="color:rgba(255,255,255,.5);">Apex &amp; Wake County, NC</span>
+          </div>
+        </a>
+        <p>A community resource directory created by students at Apex High School for the 2026 TSA Webmaster competition.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Resource Directory</a>
+        <a href="featured.html">Featured Resources</a>
+        <a href="submit.html">Submit a Resource</a>
+        <a href="about.html">About the Team</a>
+        <a href="brief.html">Design Brief</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="directory.html?filter=safety">Safety &amp; Emergency</a>
+        <a href="directory.html?filter=education">Education</a>
+        <a href="directory.html?filter=health">Health &amp; Wellness</a>
+        <a href="directory.html?filter=transport">Transportation</a>
+        <a href="directory.html?filter=youth">Youth Programs</a>
+        <a href="directory.html?filter=social">Social Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Local Government</h4>
+        <a href="https://www.apexnc.org" target="_blank" rel="noopener">Town of Apex</a>
+        <a href="https://www.wake.gov" target="_blank" rel="noopener">Wake County</a>
+        <a href="https://www.raleighnc.gov" target="_blank" rel="noopener">City of Raleigh</a>
+        <a href="https://www.townofcary.org" target="_blank" rel="noopener">Town of Cary</a>
+        <a href="https://www.ncdhhs.gov" target="_blank" rel="noopener">NC DHHS</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Apex Community Hub · Apex High School TSA Webmaster Team</span>
+      <span>Created for the NC TSA National Leadership Conference · <a href="brief.html">Design Brief</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
