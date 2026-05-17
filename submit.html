@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit a Resource — Apex Community Hub</title>
+  <meta name="description" content="Suggest a new local organization or service for the Apex Community Hub resource directory." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html" aria-label="Apex Community Hub home">
+        <div class="logo-icon" aria-hidden="true">🏛</div>
+        <div>
+          <span class="logo-text">Apex Community Hub</span>
+          <span class="logo-sub">Apex &amp; Wake County, NC</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Resources</a></li>
+        <li><a href="featured.html">Featured</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="brief.html">Design Brief</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="submit.html" class="nav-cta">Submit a Resource</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="directory.html">Resources</a>
+    <a href="featured.html">Featured</a>
+    <a href="about.html">About</a>
+    <a href="brief.html">Design Brief</a>
+    <a href="references.html">References</a>
+    <a href="submit.html">Submit a Resource</a>
+  </nav>
+</header>
+
+<!-- ══════════════ SUBMIT HERO ══════════════ -->
+<section class="submit-hero">
+  <div class="container">
+    <span class="label" style="color:rgba(255,255,255,.7);">Community Submissions</span>
+    <h1>Submit a Resource</h1>
+    <p>Know of a local organization, program, or service that should be listed here? Fill out the form below and our team will review your submission. Together we can make this directory as complete as possible.</p>
+  </div>
+</section>
+
+<!-- ══════════════ FORM SECTION ══════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;max-width:1100px;margin:0 auto;">
+
+      <!-- Form -->
+      <div class="form-container">
+        <h2 style="font-size:1.5rem;color:var(--navy);margin-bottom:.5rem;">Resource Information</h2>
+        <p style="font-size:.9rem;margin-bottom:1.5rem;">Fields marked with <span style="color:var(--teal);font-weight:700;">*</span> are required.</p>
+
+        <!-- Alerts -->
+        <div class="alert alert-success" id="successAlert" role="alert">
+          ✅ Thank you! Your resource submission has been received. Our team will review it within 3–5 business days and reach out if we have questions.
+        </div>
+        <div class="alert alert-error" id="errorAlert" role="alert">
+          ⚠️ Please correct the highlighted fields and try again.
+        </div>
+
+        <form id="submitForm" novalidate aria-label="Submit a resource form">
+
+          <!-- Organization Info -->
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--gray-100);font-family:var(--font-body);">Organization Details</h3>
+
+          <div class="form-group">
+            <label for="orgName">Organization Name <span class="req">*</span></label>
+            <input type="text" id="orgName" name="orgName" placeholder="e.g., Apex Food Pantry" autocomplete="organization" aria-required="true" aria-describedby="orgNameError" />
+            <span class="field-error" id="orgNameError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category <span class="req">*</span></label>
+            <select id="category" name="category" aria-required="true" aria-describedby="categoryError">
+              <option value="" disabled selected>Select a category…</option>
+              <option value="safety">Safety &amp; Emergency</option>
+              <option value="education">Education</option>
+              <option value="health">Health &amp; Wellness</option>
+              <option value="transport">Transportation</option>
+              <option value="youth">Youth Programs</option>
+              <option value="social">Social Services</option>
+              <option value="legal">Legal Aid</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="field-error" id="categoryError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description <span class="req">*</span></label>
+            <textarea id="description" name="description" aria-required="true" aria-describedby="descriptionError" placeholder="Briefly describe what this organization does and who it serves (at least 20 characters)…"></textarea>
+            <span class="field-error" id="descriptionError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location or Service Area <span class="req">*</span></label>
+            <input type="text" id="location" name="location" aria-required="true" aria-describedby="locationError" placeholder="e.g., 100 Main Street, Apex, NC 27502 or Serves all of Wake County" />
+            <span class="field-error" id="locationError" role="alert"></span>
+          </div>
+
+          <!-- Contact Info -->
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:1.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--gray-100);font-family:var(--font-body);">Contact Information</h3>
+          <p class="form-note" style="margin-bottom:1rem;">At least one contact method is recommended so community members can reach the organization.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactPhone">Phone Number</label>
+              <input type="tel" id="contactPhone" name="contactPhone" aria-describedby="contactPhoneError" placeholder="(919) 555-0100" autocomplete="tel" />
+              <span class="field-error" id="contactPhoneError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" name="contactEmail" aria-describedby="contactEmailError" placeholder="info@example.org" autocomplete="email" />
+              <span class="field-error" id="contactEmailError" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="website">Website URL</label>
+            <input type="url" id="website" name="website" aria-describedby="websiteError" placeholder="https://www.example.org" autocomplete="url" />
+            <span class="field-error" id="websiteError" role="alert"></span>
+            <span class="form-note">Must begin with https:// or http://</span>
+          </div>
+
+          <div class="form-group">
+            <label for="hours">Hours of Operation</label>
+            <input type="text" id="hours" name="hours" placeholder="e.g., Mon–Fri 9 AM–5 PM, or Open 24/7" />
+          </div>
+
+          <!-- Submitter Info -->
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:1.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--gray-100);font-family:var(--font-body);">Your Information</h3>
+          <p class="form-note" style="margin-bottom:1rem;">We use this to follow up if we have questions. It will not be published on the site.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="submitterName">Your Name <span class="req">*</span></label>
+              <input type="text" id="submitterName" name="submitterName" aria-required="true" aria-describedby="submitterNameError" placeholder="Full name" autocomplete="name" />
+              <span class="field-error" id="submitterNameError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="submitterEmail">Your Email <span class="req">*</span></label>
+              <input type="email" id="submitterEmail" name="submitterEmail" aria-required="true" aria-describedby="submitterEmailError" placeholder="you@example.com" autocomplete="email" />
+              <span class="field-error" id="submitterEmailError" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="affiliation">Your Affiliation with this Organization</label>
+            <select id="affiliation" name="affiliation">
+              <option value="" disabled selected>Select…</option>
+              <option value="employee">Employee / Staff</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="client">Client / Recipient of Services</option>
+              <option value="community">Community Member</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="additionalNotes">Additional Notes</label>
+            <textarea id="additionalNotes" name="additionalNotes" style="min-height:80px;" placeholder="Anything else you'd like us to know about this resource?"></textarea>
+          </div>
+
+          <div class="form-submit-row">
+            <button type="button" class="btn btn-outline" id="resetBtn">Reset Form</button>
+            <button type="submit" class="btn btn-primary" style="min-width:150px;">Submit Resource →</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <div style="position:sticky;top:84px;">
+        <div style="background:var(--sky);border-radius:var(--radius-md);padding:1.75rem;margin-bottom:1.5rem;">
+          <h3 style="font-size:1rem;color:var(--navy);margin-bottom:.75rem;font-family:var(--font-body);font-weight:700;">📋 Submission Guidelines</h3>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:.6rem;">
+            <li style="font-size:.85rem;color:var(--gray-700);display:flex;gap:.5rem;"><span>✅</span> Resources must serve Apex, NC or Wake County residents</li>
+            <li style="font-size:.85rem;color:var(--gray-700);display:flex;gap:.5rem;"><span>✅</span> Must be a legitimate nonprofit, government, or community organization</li>
+            <li style="font-size:.85rem;color:var(--gray-700);display:flex;gap:.5rem;"><span>✅</span> Free or low-cost services are prioritized</li>
+            <li style="font-size:.85rem;color:var(--gray-700);display:flex;gap:.5rem;"><span>✅</span> We verify all submissions before publishing</li>
+            <li style="font-size:.85rem;color:var(--gray-700);display:flex;gap:.5rem;"><span>❌</span> Commercial businesses are not eligible</li>
+            <li style="font-size:.85rem;color:var(--gray-700);display:flex;gap:.5rem;"><span>❌</span> Political or religious-advocacy organizations are not eligible</li>
+          </ul>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:1.75rem;margin-bottom:1.5rem;">
+          <h3 style="font-size:1rem;color:var(--navy);margin-bottom:.75rem;font-family:var(--font-body);font-weight:700;">📬 What Happens Next?</h3>
+          <ol style="padding-left:1.1rem;display:flex;flex-direction:column;gap:.55rem;">
+            <li style="font-size:.85rem;color:var(--gray-700);">Our team reviews your submission within 3–5 business days</li>
+            <li style="font-size:.85rem;color:var(--gray-700);">We verify the organization's contact information and services</li>
+            <li style="font-size:.85rem;color:var(--gray-700);">If approved, the resource is added to the directory</li>
+            <li style="font-size:.85rem;color:var(--gray-700);">We'll email you to confirm when your submission goes live</li>
+          </ol>
+        </div>
+        <div style="background:var(--navy);border-radius:var(--radius-md);padding:1.75rem;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:.6rem;">📞</div>
+          <h3 style="font-size:.95rem;color:var(--white);margin-bottom:.4rem;font-family:var(--font-body);font-weight:700;">Need Immediate Help?</h3>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.75);margin-bottom:1rem;">Don't wait for a review—call 211 to be connected with a live specialist right now.</p>
+          <a href="https://www.nc211.org" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:.85rem;padding:.55rem 1.1rem;">Dial 2-1-1 or NC211.org ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="margin-bottom:.75rem;">
+          <div class="logo-icon" aria-hidden="true">🏛</div>
+          <div>
+            <span class="logo-text">Apex Community Hub</span>
+            <span class="logo-sub" style="color:rgba(255,255,255,.5);">Apex &amp; Wake County, NC</span>
+          </div>
+        </a>
+        <p>A community resource directory created by students at Apex High School for the 2026 TSA Webmaster competition.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Resource Directory</a>
+        <a href="featured.html">Featured Resources</a>
+        <a href="submit.html">Submit a Resource</a>
+        <a href="about.html">About the Team</a>
+        <a href="brief.html">Design Brief</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="directory.html?filter=safety">Safety &amp; Emergency</a>
+        <a href="directory.html?filter=education">Education</a>
+        <a href="directory.html?filter=health">Health &amp; Wellness</a>
+        <a href="directory.html?filter=transport">Transportation</a>
+        <a href="directory.html?filter=youth">Youth Programs</a>
+        <a href="directory.html?filter=social">Social Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Local Government</h4>
+        <a href="https://www.apexnc.org" target="_blank" rel="noopener">Town of Apex</a>
+        <a href="https://www.wake.gov" target="_blank" rel="noopener">Wake County</a>
+        <a href="https://www.raleighnc.gov" target="_blank" rel="noopener">City of Raleigh</a>
+        <a href="https://www.townofcary.org" target="_blank" rel="noopener">Town of Cary</a>
+        <a href="https://www.ncdhhs.gov" target="_blank" rel="noopener">NC DHHS</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Apex Community Hub · Apex High School TSA Webmaster Team</span>
+      <span>Created for the NC TSA National Leadership Conference · <a href="brief.html">Design Brief</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
