@@ -368,3 +368,55 @@
 <script src="main.js"></script>
 </body>
 </html>
+<section class="section section-cream" id="welcome-newcomers" style="padding: 4rem 0; background: var(--cream);">
+  <div class="container">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <span class="label">New to the Community?</span>
+      <h2 style="font-family: var(--font-display); color: var(--navy); margin-top: 0.5rem;">👋 Welcome to Apex & Wake County!</h2>
+      <p style="color: var(--gray-700); font-size: 1.1rem; margin-bottom: 2rem;">Moving can be stressful. We've compiled emergency quick-access cards and localized programs to help your family integrate smoothly into our town.</p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
+      <a href="directory.html?filter=safety" class="btn" style="background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; text-align: center; padding: 1.2rem; font-weight: 600; text-decoration: none; border-radius: 8px;">🚨 Immediate Safety</a>
+      <a href="directory.html?filter=health" class="btn" style="background: #e0f2fe; color: #0369a1; border: 1px solid #7dd3fc; text-align: center; padding: 1.2rem; font-weight: 600; text-decoration: none; border-radius: 8px;">🏥 Health Clinics</a>
+      <a href="directory.html?filter=social" class="btn" style="background: #dcfce7; color: #166534; border: 1px solid #86efac; text-align: center; padding: 1.2rem; font-weight: 600; text-decoration: none; border-radius: 8px;">🤝 Family Support</a>
+      <a href="directory.html?filter=education" class="btn" style="background: #fef9c3; color: #854d0e; border: 1px solid #fde047; text-align: center; padding: 1.2rem; font-weight: 600; text-decoration: none; border-radius: 8px;">🎓 School & Libraries</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="interactive-map-hub" style="padding: 5rem 0;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <span class="label">Visual Hub Locator</span>
+      <h2 style="font-family: var(--font-display); color: var(--navy); margin-top: 0.5rem;">🗺️ Interactive Regional Resource Map</h2>
+      <p style="color: var(--gray-700);">Click on any vector region pin or local hotspot to instantly discover and load verified facilities in that municipal region.</p>
+    </div>
+
+    <div style="background: #fff; border: 1px solid var(--gray-100); border-radius: 12px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); max-width: 900px; margin: 0 auto;">
+      <svg id="apex-region-map" viewBox="0 0 800 450" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="border-radius: 6px;">
+        <g class="map-regions">
+          <path id="region-apex" d="M 50,50 L 750,50 L 650,220 L 150,220 Z" fill="#eef2f6" stroke="#c4c9d4" stroke-width="3" style="cursor:pointer; transition: fill 0.2s;" onmouseover="this.style.fill='#e2e8f0'" onmouseout="this.style.fill='#eef2f6'" />
+          <path id="region-wake" d="M 150,220 L 650,220 L 550,420 L 250,420 Z" fill="#f1f5f9" stroke="#c4c9d4" stroke-width="3" style="cursor:pointer; transition: fill 0.2s;" onmouseover="this.style.fill='#e2e8f0'" onmouseout="this.style.fill='#f1f5f9'" />
+        </g>
+        <g class="map-markers">
+          <g class="map-marker" data-target="safety" transform="translate(280, 140)" style="cursor:pointer;">
+            <circle r="22" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+            <text y="6" text-anchor="middle" font-size="18px">🛡️</text>
+            <text y="38" text-anchor="middle" font-size="12px" font-weight="bold" fill="#1a2e4a" class="marker-label">Apex Safety Hub</text>
+          </g>
+          <g class="map-marker" data-target="health" transform="translate(520, 150)" style="cursor:pointer;">
+            <circle r="22" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2" />
+            <text y="6" text-anchor="middle" font-size="18px">🏥</text>
+            <text y="38" text-anchor="middle" font-size="12px" font-weight="bold" fill="#1a2e4a" class="marker-label">WakeMed Area</text>
+          </g>
+          <g class="map-marker" data-target="education" transform="translate(400, 310)" style="cursor:pointer;">
+            <circle r="22" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2" />
+            <text y="6" text-anchor="middle" font-size="18px">📚</text>
+            <text y="38" text-anchor="middle" font-size="12px" font-weight="bold" fill="#1a2e4a" class="marker-label">County Libraries</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
