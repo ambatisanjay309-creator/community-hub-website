@@ -507,8 +507,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   document.querySelectorAll('.chip').forEach(btn => btn.addEventListener('click', () => send(btn.dataset.q)));
 })();
 /* ============================================================
-   ADD THIS AT THE VERY BOTTOM OF YOUR main.js FILE
-   Synchronization Updates & Feature Interactivity
+   Interactive Map Sync & Dynamic Infinite Calendar Engine
    ============================================================ */
 
 /* ── Interactive Map Sync with Directory ── */
@@ -523,7 +522,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     marker.addEventListener('click', () => {
       const categoryTarget = (marker.getAttribute('data-target') || '').toLowerCase();
 
-      // IF USER IS ON DIRECTORY PAGE: Set the category filter and update view
+      // IF USER IS ON DIRECTORY PAGE: Trigger filters instantly
       if (searchInput && filterBtns.length) {
         let matchingBtn = null;
         filterBtns.forEach(btn => {
@@ -533,7 +532,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         });
 
         if (matchingBtn) {
-          matchingBtn.click(); // Programmatically clicks your existing filter bar buttons!
+          matchingBtn.click();
           document.getElementById('directory-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       } else {
@@ -544,78 +543,156 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 })();
 
-/* ── Calendar UI Filter Synchronization ── */
+/* ── Dynamic Calendar Engine & Automatic Expiration ── */
 (function () {
-  const calButtons = document.querySelectorAll('.cal-filter-btn');
-  const eventCards = document.querySelectorAll('.calendar-card');
+  const communityEvents = [
+    {
+      title: "Apex Town Council Regular Session",
+      category: "Social",
+      date: new Date(2026, 5, 9, 18, 0), // June 9, 2026
+      location: "Town Hall Chambers",
+      timeLabel: "6:00 PM",
+      desc: "Attend local urban development updates, public hearings, and local student leadership announcements."
+    },
+    {
+      title: "Mobile Health & Vaccine Screening",
+      category: "Health",
+      date: new Date(2026, 5, 14, 10, 0), // June 14, 2026
+      location: "Apex Senior Center",
+      timeLabel: "10:00 AM",
+      desc: "Free preventive checkups, family blood pressure diagnostics, and wellness resources provided by Wake County Services."
+    },
+    {
+      title: "Summer Reading & Digital Tech Camp",
+      category: "Education",
+      date: new Date(2026, 5, 20, 13, 0), // June 20, 2026
+      location: "Apex Public Library",
+      timeLabel: "1:00 PM",
+      desc: "Interactive digital-literacy youth events and reading challenges designed specifically for elementary and middle school students."
+    }
+  ];
 
-  if (!calButtons.length || !eventCards.length) return;
+  let currentDateViewer = new Date();
+  
+  const monthYearHeader = document.getElementById('calendarMonthYear');
+  const daysGrid        = document.getElementById('calendarDaysGrid');
+  const eventsListArea  = document.getElementById('activeEventsContainer');
+  const prevBtn         = document.getElementById('prevMonthBtn');
+  const nextBtn         = document.getElementById('nextMonthBtn');
 
-  calButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      calButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  if (!daysGrid || !eventsListArea) return;
 
-      const filterValue = (btn.getAttribute('data-cal-filter') || 'all').toLowerCase();
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
 
-      eventCards.forEach(card => {
-        const cardCategory = (card.getAttribute('data-category') || '').toLowerCase();
-        if (filterValue === 'all' || cardCategory === filterValue) {
-          card.style.display = 'flex';
-          card.style.opacity = '0';
-          requestAnimationFrame(() => {
-            card.style.transition = 'opacity 0.3s ease';
-            card.style.opacity = '1';
-          });
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-})();
+  function renderCalendarSystem() {
+    const viewYear = currentDateViewer.getFullYear();
+    const viewMonth = currentDateViewer.getMonth();
+    const realToday = new Date();
 
-/* ── A-Z Sorting Toggle for Directory ── */
-(function () {
-  const sortToggle = document.getElementById('azSortToggle');
-  const grid = document.querySelector('.resource-grid');
-  if (!sortToggle || !grid) return;
-
-  sortToggle.addEventListener('click', () => {
-    const cards = Array.from(grid.querySelectorAll('.resource-card'));
-    const isAZ = sortToggle.classList.toggle('sorted-az');
+    daysGrid.innerHTML = "";
     
-    sortToggle.textContent = isAZ ? "🔤 Sorted A–Z (Click to Reset)" : "🔤 Sort A–Z Alphabetically";
-    sortToggle.classList.toggle('btn-gold', isAZ);
+    if (monthYearHeader) {
+      monthYearHeader.textContent = `${monthNames[viewMonth]} ${viewYear}`;
+    }
 
-    if (isAZ) {
-      cards.sort((a, b) => {
-        const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
-        const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
-        return titleA.localeCompare(titleB);
+    const firstDayIndex = new Date(viewYear, viewMonth, 1).getDay();
+    const totalDaysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+    for (let i = 0; i < firstDayIndex; i++) {
+      const blankNode = document.createElement('div');
+      blankNode.style.padding = "0.5rem 0";
+      daysGrid.appendChild(blankNode);
+    }
+
+    for (let day = 1; day <= totalDaysInMonth; day++) {
+      const dayCell = document.createElement('div');
+      dayCell.textContent = day;
+      dayCell.style.padding = "0.5rem 0";
+      dayCell.style.fontSize = "0.9rem";
+      dayCell.style.borderRadius = "4px";
+      dayCell.style.fontWeight = "500";
+
+      const targetedDate = new Date(viewYear, viewMonth, day);
+
+      if (targetedDate.toDateString() === realToday.toDateString()) {
+        dayCell.style.background = "var(--sky)";
+        dayCell.style.color = "var(--navy)";
+        dayCell.style.fontWeight = "bold";
+      }
+
+      const hasEventOnThisDay = communityEvents.some(event => {
+        const isSameDay = event.date.getFullYear() === viewYear &&
+                          event.date.getMonth() === viewMonth &&
+                          event.date.getDate() === day;
+        
+        const targetMidnight = new Date(event.date.getFullYear(), event.date.getMonth(), event.date.getDate(), 23, 59, 59);
+        return isSameDay && targetMidnight >= realToday;
       });
-    } else {
-      // Reset back to original HTML layout order using data properties or index location
-      window.location.reload(); 
+
+      if (hasEventOnThisDay) {
+        dayCell.style.background = "var(--teal)";
+        dayCell.style.color = "#fff";
+        dayCell.style.fontWeight = "bold";
+      }
+
+      daysGrid.appendChild(dayCell);
+    }
+
+    eventsListArea.innerHTML = "";
+    
+    const activeValidEntries = communityEvents
+      .filter(event => {
+        const eventMidnightCutoff = new Date(event.date.getFullYear(), event.date.getMonth(), event.date.getDate(), 23, 59, 59);
+        return eventMidnightCutoff >= realToday;
+      })
+      .sort((a, b) => a.date - b.date);
+
+    if (activeValidEntries.length === 0) {
+      eventsListArea.innerHTML = `
+        <div style="text-align: center; padding: 2rem; border: 1px dashed var(--gray-300); border-radius: 8px; color: var(--gray-500);">
+          <span>📭</span>
+          <p style="margin: 0.5rem 0 0; font-size: 0.95rem;">No upcoming public programs scheduled.</p>
+        </div>`;
       return;
     }
 
-    cards.forEach(card => grid.appendChild(card));
-  });
-})();
+    activeValidEntries.forEach(event => {
+      const card = document.createElement('div');
+      card.style.cssText = "display: flex; background: #fff; border: 1px solid var(--gray-100); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.01); text-align: left;";
+      
+      const monthLabel = monthNames[event.date.getMonth()].substring(0, 3).toUpperCase();
+      const dayLabel = String(event.date.getDate()).padStart(2, '0');
 
-/* ── Accessibility & Advanced Controls (Keyboard Shortcut + Skip Link) ── */
-(function () {
-  // Focus local search bar on '/' key down
-  document.addEventListener('keydown', (e) => {
-    const dirInput = document.getElementById('dirSearchInput');
-    const heroInput = document.getElementById('heroSearchInput');
-    const active = document.activeElement;
+      card.innerHTML = `
+        <div style="background: var(--teal); color: #fff; padding: 1.2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 85px; text-align: center;">
+          <span style="font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">${monthLabel}</span>
+          <span style="font-size: 1.6rem; font-weight: bold; line-height: 1;">${dayLabel}</span>
+        </div>
+        <div style="padding: 1.2rem;">
+          <span style="font-size: 0.7rem; font-weight: bold; text-transform: uppercase; color: var(--teal); background: #f0fdf4; padding: 2px 6px; border-radius:4px;">${event.category}</span>
+          <h4 style="margin: 0.4rem 0 0.2rem; font-size: 1.1rem; color: var(--navy); font-family: var(--font-display);">${event.title}</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0 0 0.6rem;">📍 ${event.location} | ⏰ ${event.timeLabel}</p>
+          <p style="font-size: 0.85rem; color: var(--gray-700); line-height: 1.4; margin: 0;">${event.desc}</p>
+        </div>
+      `;
+      eventsListArea.appendChild(card);
+    });
+  }
 
-    if (e.key === '/' && active !== dirInput && active !== heroInput && active.tagName !== 'TEXTAREA') {
-      e.preventDefault();
-      if (dirInput) { dirInput.focus(); }
-      else if (heroInput) { heroInput.focus(); }
-    }
-  });
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentDateViewer.setMonth(currentDateViewer.getMonth() - 1);
+      renderCalendarSystem();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentDateViewer.setMonth(currentDateViewer.getMonth() + 1);
+      renderCalendarSystem();
+    });
+  }
+
+  renderCalendarSystem();
 })();
