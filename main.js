@@ -506,3 +506,116 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   input.addEventListener('input', function () { this.style.height = 'auto'; this.style.height = Math.min(this.scrollHeight, 80) + 'px'; });
   document.querySelectorAll('.chip').forEach(btn => btn.addEventListener('click', () => send(btn.dataset.q)));
 })();
+/* ============================================================
+   ADD THIS AT THE VERY BOTTOM OF YOUR main.js FILE
+   Synchronization Updates & Feature Interactivity
+   ============================================================ */
+
+/* ── Interactive Map Sync with Directory ── */
+(function () {
+  const mapMarkers = document.querySelectorAll('.map-marker');
+  const searchInput = document.getElementById('searchInput');
+  const filterBtns  = document.querySelectorAll('.filter-btn');
+
+  if (!mapMarkers.length) return;
+
+  mapMarkers.forEach(marker => {
+    marker.addEventListener('click', () => {
+      const categoryTarget = (marker.getAttribute('data-target') || '').toLowerCase();
+
+      // IF USER IS ON DIRECTORY PAGE: Set the category filter and update view
+      if (searchInput && filterBtns.length) {
+        let matchingBtn = null;
+        filterBtns.forEach(btn => {
+          if ((btn.dataset.filter || '').toLowerCase() === categoryTarget) {
+            matchingBtn = btn;
+          }
+        });
+
+        if (matchingBtn) {
+          matchingBtn.click(); // Programmatically clicks your existing filter bar buttons!
+          document.getElementById('directory-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else {
+        // IF USER IS ON HOME PAGE: Redirect to directory with a url parameter
+        window.location.href = `directory.html?filter=${categoryTarget}`;
+      }
+    });
+  });
+})();
+
+/* ── Calendar UI Filter Synchronization ── */
+(function () {
+  const calButtons = document.querySelectorAll('.cal-filter-btn');
+  const eventCards = document.querySelectorAll('.calendar-card');
+
+  if (!calButtons.length || !eventCards.length) return;
+
+  calButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      calButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = (btn.getAttribute('data-cal-filter') || 'all').toLowerCase();
+
+      eventCards.forEach(card => {
+        const cardCategory = (card.getAttribute('data-category') || '').toLowerCase();
+        if (filterValue === 'all' || cardCategory === filterValue) {
+          card.style.display = 'flex';
+          card.style.opacity = '0';
+          requestAnimationFrame(() => {
+            card.style.transition = 'opacity 0.3s ease';
+            card.style.opacity = '1';
+          });
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+
+/* ── A-Z Sorting Toggle for Directory ── */
+(function () {
+  const sortToggle = document.getElementById('azSortToggle');
+  const grid = document.querySelector('.resource-grid');
+  if (!sortToggle || !grid) return;
+
+  sortToggle.addEventListener('click', () => {
+    const cards = Array.from(grid.querySelectorAll('.resource-card'));
+    const isAZ = sortToggle.classList.toggle('sorted-az');
+    
+    sortToggle.textContent = isAZ ? "🔤 Sorted A–Z (Click to Reset)" : "🔤 Sort A–Z Alphabetically";
+    sortToggle.classList.toggle('btn-gold', isAZ);
+
+    if (isAZ) {
+      cards.sort((a, b) => {
+        const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
+        const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
+        return titleA.localeCompare(titleB);
+      });
+    } else {
+      // Reset back to original HTML layout order using data properties or index location
+      window.location.reload(); 
+      return;
+    }
+
+    cards.forEach(card => grid.appendChild(card));
+  });
+})();
+
+/* ── Accessibility & Advanced Controls (Keyboard Shortcut + Skip Link) ── */
+(function () {
+  // Focus local search bar on '/' key down
+  document.addEventListener('keydown', (e) => {
+    const dirInput = document.getElementById('dirSearchInput');
+    const heroInput = document.getElementById('heroSearchInput');
+    const active = document.activeElement;
+
+    if (e.key === '/' && active !== dirInput && active !== heroInput && active.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      if (dirInput) { dirInput.focus(); }
+      else if (heroInput) { heroInput.focus(); }
+    }
+  });
+})();
