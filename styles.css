@@ -1165,3 +1165,28 @@ p  { font-size: 1rem; color: var(--gray-700); }
 }
 .not-found-section h2 { color: var(--navy); margin-bottom: .75rem; }
 .not-found-section p  { max-width: 420px; margin: 0 auto 2rem; }
+/* Custom Added Component Styling Extensions */
+.cal-filter-btn.active {
+  background: var(--teal) !important;
+  color: #fff !important;
+  border-color: var(--teal) !important;
+}
+
+.calendar-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calendar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(26,46,74,0.08) !important;
+}
+
+/* Specific SVG Map Interactions */
+.map-marker:hover circle {
+  fill: #fff !important;
+  stroke-width: 3px !important;
+}
+
+.map-marker:hover text {
+  fill: var(--teal-light) !important;
+}
