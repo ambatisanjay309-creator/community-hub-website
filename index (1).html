@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Community Hub — Home</title>
+  <meta name="description" content="Your one-stop directory of community resources, services, and programs serving Apex, NC and Wake County." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════ SKIP LINK ══════════════ -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ══════════════ EMERGENCY STRIP ══════════════ -->
+<div class="emergency-strip" role="alert">
+  🚨 Emergency? Call <strong>911</strong> · Non-emergency mental health crisis: <a href="tel:8005109132">(800) 510-9132</a> · Free local help: <strong>Dial 2-1-1</strong>
+</div>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html" aria-label="Apex Community Hub home">
+        <div class="logo-icon" aria-hidden="true">🏛</div>
+        <div>
+          <span class="logo-text">Apex Community Hub</span>
+          <span class="logo-sub">Apex &amp; Wake County, NC</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Resources</a></li>
+        <li><a href="featured.html">Featured</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="brief.html">Design Brief</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="submit.html" class="nav-cta">Submit a Resource</a></li>
+      </ul>
+      <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">🌙 Dark</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="directory.html">Resources</a>
+    <a href="featured.html">Featured</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About</a>
+    <a href="brief.html">Design Brief</a>
+    <a href="references.html">References</a>
+    <a href="submit.html">Submit a Resource</a>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="hero-photo" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1570126618953-d437176e8c79?w=1600&q=70&auto=format&fit=crop" alt="" loading="eager" />
+  </div>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label fade-up fade-up-1">
+          <span>📍</span> Apex &amp; Wake County, North Carolina
+        </div>
+        <h1 class="fade-up fade-up-1">Find the <em>resources</em> your community needs</h1>
+        <p class="fade-up fade-up-2">A comprehensive, student-curated directory connecting Apex residents with local services—safety, education, health, transportation, and more. Free, verified, and built by your neighbors.</p>
+        <div class="hero-actions fade-up fade-up-3">
+          <div style="display:flex;gap:.6rem;width:100%;max-width:460px;">
+            <label for="heroSearchInput" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Search community resources</label>
+            <input type="text" id="heroSearchInput" placeholder="Search libraries, clinics, programs… (or press /)" style="flex:1;padding:.72rem 1rem;border:2px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.12);color:#fff;font-family:inherit;font-size:.95rem;outline:none;" aria-label="Search resources" />
+            <button class="btn btn-gold" id="heroSearchBtn">Search</button>
+          </div>
+        </div>
+        <div class="hero-stats fade-up fade-up-4">
+          <div class="stat-card">
+            <div class="stat-num" data-target="22" data-suffix="+">22+</div>
+            <div class="stat-label">Verified Local Resources</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="7" data-suffix="">7</div>
+            <div class="stat-label">Service Categories</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="1" data-suffix="M+">1M+</div>
+            <div class="stat-label">Wake County Residents Served</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">Free</div>
+            <div class="stat-label">Always Open Access</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card">
+          <div class="hero-card-icon" style="background:rgba(255,255,255,.15);">🏥</div>
+          <div><h4>WakeMed Health</h4><p>Emergency &amp; specialty care across Wake County</p></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon" style="background:rgba(255,255,255,.15);">📚</div>
+          <div><h4>Wake County Public Library</h4><p>Books, digital resources &amp; community programs</p></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon" style="background:rgba(255,255,255,.15);">🚌</div>
+          <div><h4>GoApex Transit</h4><p>Bus &amp; transit options throughout Apex &amp; Wake</p></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon" style="background:rgba(255,255,255,.15);">🛡️</div>
+          <div><h4>Apex Police Department</h4><p>Community policing &amp; public safety programs</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ I NEED HELP WITH… ══════════════ -->
+<section class="section" style="padding:2.5rem 0;">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:1rem;">
+      <span class="label">Quick Access</span>
+      <h2>I need help with…</h2>
+      <p>Jump directly to the resources you need right now.</p>
+    </div>
+    <div class="quick-access-grid">
+      <a href="directory.html?filter=safety" class="quick-access-btn emergency-btn reveal">
+        <span class="qa-icon">🚨</span>
+        <span class="qa-label">Emergency</span>
+      </a>
+      <a href="directory.html?filter=health" class="quick-access-btn reveal">
+        <span class="qa-icon">🍽️</span>
+        <span class="qa-label">Food</span>
+      </a>
+      <a href="directory.html?filter=health" class="quick-access-btn reveal">
+        <span class="qa-icon">🏥</span>
+        <span class="qa-label">Health</span>
+      </a>
+      <a href="directory.html?filter=social" class="quick-access-btn reveal">
+        <span class="qa-icon">🏠</span>
+        <span class="qa-label">Housing</span>
+      </a>
+      <a href="directory.html?filter=transport" class="quick-access-btn reveal">
+        <span class="qa-icon">🚌</span>
+        <span class="qa-label">Transit</span>
+      </a>
+      <a href="directory.html?filter=youth" class="quick-access-btn reveal">
+        <span class="qa-icon">🌱</span>
+        <span class="qa-label">Youth</span>
+      </a>
+      <a href="directory.html?filter=education" class="quick-access-btn reveal">
+        <span class="qa-icon">📚</span>
+        <span class="qa-label">Education</span>
+      </a>
+      <a href="directory.html?filter=legal" class="quick-access-btn reveal">
+        <span class="qa-icon">⚖️</span>
+        <span class="qa-label">Legal Aid</span>
+      </a>
+      <a href="directory.html?q=senior" class="quick-access-btn reveal">
+        <span class="qa-icon">👴</span>
+        <span class="qa-label">Seniors</span>
+      </a>
+      <a href="directory.html?q=mental+health" class="quick-access-btn reveal">
+        <span class="qa-icon">🧠</span>
+        <span class="qa-label">Mental Health</span>
+      </a>
+    </div>
+    <p style="text-align:center;margin-top:1rem;font-size:.82rem;color:var(--gray-500);">
+      Not sure where to start? <strong>Dial 2-1-1</strong> — free, 24/7, live help. Or ask our <button onclick="document.getElementById('chatToggle')?.click()" style="background:none;border:none;color:var(--teal);cursor:pointer;font-weight:600;font-size:.82rem;text-decoration:underline;padding:0;">Community Assistant →</button>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ HOW TO USE THIS HUB ══════════════ -->
+<section class="section section-sky" style="padding:3rem 0;">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Quick Start Guide</span>
+      <h2>How to Use This Hub</h2>
+      <p>Get from "I need help" to "I found it" in under a minute.</p>
+    </div>
+    <div class="how-to-grid stagger-children">
+      <div class="how-to-step reveal">
+        <div class="how-to-step-num">1</div>
+        <span style="font-size:2rem;margin-bottom:.5rem;">🔍</span>
+        <h4>Search or Browse</h4>
+        <p>Type a keyword above, or use the category buttons to browse by topic.</p>
+        <p style="margin-top:.5rem;"><kbd>/</kbd> focuses the search bar instantly.</p>
+      </div>
+      <div class="how-to-step reveal">
+        <div class="how-to-step-num">2</div>
+        <span style="font-size:2rem;margin-bottom:.5rem;">📋</span>
+        <h4>Read the Details</h4>
+        <p>Each card shows the address, phone number, hours, and a description of who the resource serves.</p>
+      </div>
+      <div class="how-to-step reveal">
+        <div class="how-to-step-num">3</div>
+        <span style="font-size:2rem;margin-bottom:.5rem;">📞</span>
+        <h4>Make Contact</h4>
+        <p>Call directly, visit the website, or use the directions link to get there. All info is verified.</p>
+      </div>
+      <div class="how-to-step reveal">
+        <div class="how-to-step-num">4</div>
+        <span style="font-size:2rem;margin-bottom:.5rem;">🖨️</span>
+        <h4>Print for Offline Use</h4>
+        <p>Need a paper copy for a senior or someone without internet? Hit <strong>Ctrl+P</strong> on the directory page for a clean print layout.</p>
+      </div>
+      <div class="how-to-step reveal">
+        <div class="how-to-step-num">5</div>
+        <span style="font-size:2rem;margin-bottom:.5rem;">💬</span>
+        <h4>Ask the Assistant</h4>
+        <p>Not sure which resource fits? Use the chat widget in the bottom-right corner for guided help.</p>
+      </div>
+      <div class="how-to-step reveal">
+        <div class="how-to-step-num">6</div>
+        <span style="font-size:2rem;margin-bottom:.5rem;">➕</span>
+        <h4>Add a Resource</h4>
+        <p>Know a local service we missed? <a href="submit.html" style="color:var(--teal);">Submit it here</a> and we'll verify and add it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ QUICK STRIP ══════════════ -->
+<div class="quick-strip">
+  <div class="container">
+    <div class="quick-inner">
+      <span class="quick-label">Quick Links</span>
+      <nav class="quick-links" aria-label="Quick links">
+        <a href="https://www.wake.gov" target="_blank" rel="noopener">Wake County Gov</a>
+        <a href="https://www.apexnc.org" target="_blank" rel="noopener">Town of Apex</a>
+        <a href="https://www.wcpss.net" target="_blank" rel="noopener">Wake County Schools</a>
+        <a href="https://www.nc211.org" target="_blank" rel="noopener">NC 211</a>
+        <a href="events.html">Community Events →</a>
+        <a href="directory.html">View All Resources →</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ COMMUNITY IMPACT ══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Community Impact</span>
+      <h2>Why this directory matters</h2>
+      <p>Apex is one of the fastest-growing communities in North Carolina. These numbers show the scale of need — and opportunity — in our county.</p>
+    </div>
+    <div class="impact-grid stagger-children">
+      <div class="impact-stat-block reveal">
+        <div class="impact-num" data-target="1140000" data-suffix="+" id="imp1">1.14M+</div>
+        <div class="impact-label">Wake County Population</div>
+        <div class="impact-source">U.S. Census Bureau, 2023 estimate</div>
+      </div>
+      <div class="impact-stat-block reveal">
+        <div class="impact-num" data-target="65000" data-suffix="+" id="imp2">65,000+</div>
+        <div class="impact-label">Apex Residents</div>
+        <div class="impact-source">Town of Apex, 2024 estimate</div>
+      </div>
+      <div class="impact-stat-block reveal">
+        <div class="impact-num" id="imp3">1 in 8</div>
+        <div class="impact-label">Wake Residents Experience Food Insecurity</div>
+        <div class="impact-source">Food Bank of Central &amp; Eastern NC</div>
+      </div>
+      <div class="impact-stat-block reveal">
+        <div class="impact-num" data-target="3500" data-suffix="+" id="imp4">3,500+</div>
+        <div class="impact-label">Nonprofits in Wake County</div>
+        <div class="impact-source">NC Secretary of State, 2024</div>
+      </div>
+      <div class="impact-stat-block reveal">
+        <div class="impact-num" id="imp5">24/7</div>
+        <div class="impact-label">NC 211 Help Available</div>
+        <div class="impact-source">Free, confidential, multilingual</div>
+      </div>
+      <div class="impact-stat-block reveal">
+        <div class="impact-num" data-target="20" data-suffix="+" id="imp6">20+</div>
+        <div class="impact-label">Wake County Library Branches</div>
+        <div class="impact-source">Wake County Public Libraries, 2024</div>
+      </div>
+    </div>
+
+    <div class="did-you-know" style="margin-top:2.5rem;">
+      <span class="dyk-icon">💡</span>
+      <p><strong>Did you know?</strong> Apex was ranked one of <strong>Money Magazine's "Best Places to Live"</strong> in America — but rapid growth means many new residents don't know where to find the services they need. That's exactly why we built this hub.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ RESOURCE OF THE MONTH ══════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Monthly Spotlight</span>
+      <h2>Resource of the Month</h2>
+      <p>Each month we highlight a seasonal or particularly impactful resource. This month: summer youth programs as school winds down.</p>
+    </div>
+    <div class="resource-month-card reveal" style="margin-top:1.5rem;">
+      <div class="resource-month-icon">🌱</div>
+      <div class="resource-month-body">
+        <span class="label" style="margin-bottom:.25rem;">June 2026 — Summer Spotlight</span>
+        <h3>Apex Parks &amp; Recreation Summer Programs</h3>
+        <p>With school out, Apex Parks &amp; Recreation offers summer day camps, swim lessons, sports clinics, and teen programs — many with financial assistance available. Registration fills fast; apply early. The department also coordinates the Apex Senior Center's summer lunch program for residents 55+.</p>
+        <div style="display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap;">
+          <a href="directory.html?filter=youth" class="btn btn-primary" style="font-size:.85rem;">View Youth Programs</a>
+          <a href="https://www.apexnc.org/183/Parks-Recreation" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:.85rem;">apexnc.org/Parks →</a>
+        </div>
+      </div>
+      <div class="resource-month-meta">
+        <span>📞 (919) 249-3400</span>
+        <span>📍 53 Hunter St, Apex, NC</span>
+        <span>🗓 Programs run June–August</span>
+        <span>💰 Assistance available</span>
+      </div>
+    </div>
+
+    <div class="did-you-know" style="margin-top:2rem;">
+      <span class="dyk-icon">🌞</span>
+      <p><strong>Summer tip:</strong> Wake County also offers <strong>free summer meals</strong> for children 18 and under at dozens of sites across the county. No registration required. Visit <a href="https://www.wake.gov" target="_blank" rel="noopener" style="color:var(--teal);">wake.gov</a> or dial 2-1-1 to find the nearest site.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BROWSE BY CATEGORY ══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Browse by Category</span>
+      <h2>What are you looking for?</h2>
+      <p>Explore resources organized by the services that matter most to Apex and Wake County residents.</p>
+    </div>
+    <div class="category-grid stagger-children">
+      <a href="directory.html?filter=safety" class="category-card reveal" aria-label="Safety resources">
+        <img class="cat-bg" src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=400&q=60&auto=format&fit=crop" alt="" loading="lazy" />
+        <span class="category-icon">🛡️</span>
+        <h3>Safety &amp; Emergency</h3>
+        <p>Police, fire, emergency shelters, and crisis lines</p>
+      </a>
+      <a href="directory.html?filter=education" class="category-card reveal" aria-label="Education resources">
+        <img class="cat-bg" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=60&auto=format&fit=crop" alt="" loading="lazy" />
+        <span class="category-icon">🎓</span>
+        <h3>Education</h3>
+        <p>Schools, libraries, tutoring, and youth learning</p>
+      </a>
+      <a href="directory.html?filter=health" class="category-card reveal" aria-label="Health resources">
+        <img class="cat-bg" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=60&auto=format&fit=crop" alt="" loading="lazy" />
+        <span class="category-icon">🏥</span>
+        <h3>Health &amp; Wellness</h3>
+        <p>Hospitals, clinics, mental health, and senior care</p>
+      </a>
+      <a href="directory.html?filter=transport" class="category-card reveal" aria-label="Transportation resources">
+        <img class="cat-bg" src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=400&q=60&auto=format&fit=crop" alt="" loading="lazy" />
+        <span class="category-icon">🚌</span>
+        <h3>Transportation</h3>
+        <p>Public transit, ride assistance, and mobility programs</p>
+      </a>
+      <a href="directory.html?filter=youth" class="category-card reveal" aria-label="Youth programs">
+        <img class="cat-bg" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&q=60&auto=format&fit=crop" alt="" loading="lazy" />
+        <span class="category-icon">🌱</span>
+        <h3>Youth Programs</h3>
+        <p>After-school, camps, mentorship, and youth services</p>
+      </a>
+      <a href="directory.html?filter=social" class="category-card reveal" aria-label="Social services">
+        <img class="cat-bg" src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=400&q=60&auto=format&fit=crop" alt="" loading="lazy" />
+        <span class="category-icon">🤝</span>
+        <h3>Social Services</h3>
+        <p>Food assistance, housing, domestic violence, and more</p>
+      </a>
+      <a href="directory.html?filter=legal" class="category-card reveal" aria-label="Legal aid">
+        <img class="cat-bg" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&q=60&auto=format&fit=crop" alt="" loading="lazy" />
+        <span class="category-icon">⚖️</span>
+        <h3>Legal Aid</h3>
+        <p>Free legal help, tenant rights, and advocacy</p>
+      </a>
+      <a href="events.html" class="category-card reveal" aria-label="Community events">
+        <img class="cat-bg" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=60&auto=format&fit=crop" alt="" loading="lazy" />
+        <span class="category-icon">📅</span>
+        <h3>Events &amp; Programs</h3>
+        <p>Farmers markets, town halls, and community events</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ NEW TO APEX? ══════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Newcomer Guide</span>
+      <h2>New to Apex?</h2>
+      <p>Welcome to one of North Carolina's most vibrant communities. Here's how to get connected fast.</p>
+    </div>
+    <div class="newcomer-section reveal" style="margin-top:2rem;">
+      <div>
+        <h2>Welcome to <em>Apex, NC</em></h2>
+        <p>Apex has been one of the fastest-growing towns in America for good reason — excellent schools, a thriving downtown, safe neighborhoods, and easy access to the Research Triangle. But navigating a new community can be overwhelming.</p>
+        <p style="margin-top:.75rem;">This hub is your starting point. Below are the first five things every new Apex resident should know.</p>
+        <div class="newcomer-steps">
+          <div class="newcomer-step">
+            <div class="newcomer-step-num">1</div>
+            <div class="newcomer-step-text">
+              <h4>Register Your Kids for School</h4>
+              <p>Wake County Public Schools (WCPSS) enrollment opens online. Visit wcpss.net for your assigned school by address.</p>
+            </div>
+          </div>
+          <div class="newcomer-step">
+            <div class="newcomer-step-num">2</div>
+            <div class="newcomer-step-text">
+              <h4>Get a Free Library Card</h4>
+              <p>The Apex Branch Library on W. Beaver Creek Dr. is free for all Wake County residents — books, digital resources, and Wi-Fi.</p>
+            </div>
+          </div>
+          <div class="newcomer-step">
+            <div class="newcomer-step-num">3</div>
+            <div class="newcomer-step-text">
+              <h4>Save 2-1-1 in Your Phone</h4>
+              <p>NC 211 connects you to any local service — 24/7, free, and available in multiple languages.</p>
+            </div>
+          </div>
+          <div class="newcomer-step">
+            <div class="newcomer-step-num">4</div>
+            <div class="newcomer-step-text">
+              <h4>Learn About GoApex Transit</h4>
+              <p>Apex runs free and low-cost bus routes connecting to GoTriangle regional transit for the broader metro area.</p>
+            </div>
+          </div>
+          <div class="newcomer-step">
+            <div class="newcomer-step-num">5</div>
+            <div class="newcomer-step-text">
+              <h4>Attend a Town Hall Meeting</h4>
+              <p>Apex Town Council meets monthly — a great way to meet neighbors and understand your new community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newcomer-ctas">
+        <a href="directory.html?filter=education" class="newcomer-cta-item">
+          <span class="nci-icon">🏫</span>
+          <div><h4>Find Schools &amp; Childcare</h4><p>WCPSS enrollment, daycare, and tutoring resources</p></div>
+        </a>
+        <a href="directory.html?filter=health" class="newcomer-cta-item">
+          <span class="nci-icon">🏥</span>
+          <div><h4>Find a Doctor or Clinic</h4><p>Primary care, urgent care, and mental health near Apex</p></div>
+        </a>
+        <a href="directory.html?filter=transport" class="newcomer-cta-item">
+          <span class="nci-icon">🚌</span>
+          <div><h4>Get Around Without a Car</h4><p>GoApex, GoTriangle, and community transportation options</p></div>
+        </a>
+        <a href="https://www.apexnc.org" target="_blank" rel="noopener" class="newcomer-cta-item">
+          <span class="nci-icon">🏛</span>
+          <div><h4>Connect with Town Government</h4><p>Permits, utilities, parks, and public services at apexnc.org</p></div>
+        </a>
+        <a href="events.html" class="newcomer-cta-item">
+          <span class="nci-icon">📅</span>
+          <div><h4>Upcoming Community Events</h4><p>Farmers markets, town halls, and local gatherings</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ UPCOMING EVENTS PREVIEW ══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Community Events</span>
+      <h2>What's happening in Apex</h2>
+      <p>Stay connected with local gatherings, markets, and programs across Apex and Wake County.</p>
+    </div>
+    <div class="events-grid stagger-children">
+      <div class="event-card reveal">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">7</div>
+        </div>
+        <div class="event-body">
+          <h4>Apex Farmers Market</h4>
+          <p>Fresh local produce, artisanal goods, and live music at Salem Street in historic downtown Apex. Every Saturday morning through October.</p>
+          <div class="event-meta">
+            <span class="event-tag">🥬 Food</span>
+            <span class="event-tag">📍 Downtown Apex</span>
+          </div>
+          <a href="events.html">View all events →</a>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date-block" style="background:var(--teal);">
+          <div class="event-month">Jun</div>
+          <div class="event-day">10</div>
+        </div>
+        <div class="event-body">
+          <h4>Apex Town Council Meeting</h4>
+          <p>Monthly public meeting where residents can comment on town decisions, zoning, and budget. Open to all — no registration required.</p>
+          <div class="event-meta">
+            <span class="event-tag">🏛 Civic</span>
+            <span class="event-tag">📍 Town Hall, 73 Hunter St</span>
+          </div>
+          <a href="events.html">View all events →</a>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date-block" style="background:#5b21b6;">
+          <div class="event-month">Jun</div>
+          <div class="event-day">14</div>
+        </div>
+        <div class="event-body">
+          <h4>Wake County Library Summer Reading Kickoff</h4>
+          <p>Free summer reading challenge for kids, teens, and adults at all Wake County library branches. Prizes, events, and reading logs available.</p>
+          <div class="event-meta">
+            <span class="event-tag">📚 Education</span>
+            <span class="event-tag">📍 All WCPL Branches</span>
+          </div>
+          <a href="events.html">View all events →</a>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date-block" style="background:#065f46;">
+          <div class="event-month">Jun</div>
+          <div class="event-day">21</div>
+        </div>
+        <div class="event-body">
+          <h4>Apex Parks Summer Camp Registration Deadline</h4>
+          <p>Last day to register for Apex Parks &amp; Recreation summer youth day camps. Financial assistance available — apply before spots fill.</p>
+          <div class="event-meta">
+            <span class="event-tag">🌱 Youth</span>
+            <span class="event-tag">📍 Apex Community Center</span>
+          </div>
+          <a href="events.html">View all events →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="events.html" class="btn btn-outline">View Full Events Calendar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ WAKE COUNTY MAP ══════════════ -->
+<section class="section section-sky">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Interactive Map</span>
+      <h2>Resources across Wake County</h2>
+      <p>Key resource locations mapped across the county. Hover or tap a marker to learn more.</p>
+    </div>
+    <div class="map-section-inner" style="margin-top:2rem;">
+      <div class="map-wrapper reveal-left">
+        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Wake County showing key resource locations">
+          <title>Wake County Resource Map</title>
+          <!-- County outline approximation -->
+          <polygon points="80,40 420,35 450,80 460,200 440,320 380,370 200,375 90,340 50,250 60,120" fill="#dff0f5" stroke="#1b7f79" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- City areas -->
+          <circle cx="270" cy="195" r="38" fill="rgba(27,127,121,.12)" stroke="rgba(27,127,121,.3)" stroke-width="1.5"/>
+          <text x="270" y="243" text-anchor="middle" font-size="9" fill="var(--gray-500)" font-family="sans-serif">Raleigh</text>
+          <circle cx="150" cy="240" r="22" fill="rgba(26,46,74,.08)" stroke="rgba(26,46,74,.2)" stroke-width="1"/>
+          <text x="150" y="268" text-anchor="middle" font-size="9" fill="var(--gray-500)" font-family="sans-serif">Apex</text>
+          <circle cx="195" cy="270" r="18" fill="rgba(26,46,74,.06)" stroke="rgba(26,46,74,.15)" stroke-width="1"/>
+          <text x="195" y="295" text-anchor="middle" font-size="9" fill="var(--gray-500)" font-family="sans-serif">Cary</text>
+          <!-- Resource dots with labels -->
+          <!-- Apex Police -->
+          <g class="map-dot" data-name="Apex Police Dept" data-info="53 Hunter St, Apex · (919) 362-8661" tabindex="0" role="button" aria-label="Apex Police Department">
+            <circle cx="148" cy="232" r="8" fill="#991b1b" opacity=".85"/>
+            <text x="148" y="235" text-anchor="middle" font-size="8" fill="white">🛡</text>
+          </g>
+          <!-- WakeMed -->
+          <g class="map-dot" data-name="WakeMed Health" data-info="3000 New Bern Ave, Raleigh · (919) 350-8000" tabindex="0" role="button" aria-label="WakeMed Health and Hospitals">
+            <circle cx="310" cy="175" r="8" fill="#065f46" opacity=".85"/>
+            <text x="310" y="178" text-anchor="middle" font-size="8" fill="white">🏥</text>
+          </g>
+          <!-- Wake County Library Apex -->
+          <g class="map-dot" data-name="Apex Branch Library" data-info="1340 W Beaver Creek Dr · (919) 250-1200" tabindex="0" role="button" aria-label="Apex Branch Library">
+            <circle cx="138" cy="248" r="8" fill="#1e40af" opacity=".85"/>
+            <text x="138" y="251" text-anchor="middle" font-size="8" fill="white">📚</text>
+          </g>
+          <!-- Food Bank -->
+          <g class="map-dot" data-name="Food Bank of Central &amp; E. NC" data-info="3 Solar Ct, Morrisville · (919) 460-7900" tabindex="0" role="button" aria-label="Food Bank of Central and Eastern NC">
+            <circle cx="213" cy="215" r="8" fill="#92400e" opacity=".85"/>
+            <text x="213" y="218" text-anchor="middle" font-size="8" fill="white">🥫</text>
+          </g>
+          <!-- GoApex transit -->
+          <g class="map-dot" data-name="GoApex Transit Hub" data-info="Apex — (919) 249-3400 · apexnc.org" tabindex="0" role="button" aria-label="GoApex Transit">
+            <circle cx="158" cy="255" r="8" fill="#92400e" opacity=".85"/>
+            <text x="158" y="258" text-anchor="middle" font-size="8" fill="white">🚌</text>
+          </g>
+          <!-- YMCA Cary -->
+          <g class="map-dot" data-name="YMCA of the Triangle" data-info="101 YMCA Dr, Cary · (919) 380-1155" tabindex="0" role="button" aria-label="YMCA of the Triangle, Cary">
+            <circle cx="200" cy="276" r="8" fill="#5b21b6" opacity=".85"/>
+            <text x="200" y="279" text-anchor="middle" font-size="8" fill="white">🌱</text>
+          </g>
+          <!-- Legal Aid NC -->
+          <g class="map-dot" data-name="Legal Aid of NC" data-info="224 S Dawson St, Raleigh · (919) 856-2564" tabindex="0" role="button" aria-label="Legal Aid of NC">
+            <circle cx="268" cy="210" r="8" fill="#0369a1" opacity=".85"/>
+            <text x="268" y="213" text-anchor="middle" font-size="8" fill="white">⚖</text>
+          </g>
+          <!-- Apex Senior Center -->
+          <g class="map-dot" data-name="Apex Senior Center" data-info="53 Hunter St, Apex · (919) 249-3402" tabindex="0" role="button" aria-label="Apex Senior Center">
+            <circle cx="142" cy="242" r="8" fill="#e8a020" opacity=".85"/>
+            <text x="142" y="245" text-anchor="middle" font-size="8" fill="white">👴</text>
+          </g>
+          <!-- County label -->
+          <text x="390" y="55" text-anchor="middle" font-size="11" fill="var(--navy)" font-family="sans-serif" font-weight="600">Wake County, NC</text>
+          <!-- Tooltip placeholder -->
+          <rect id="mapTooltipBg" x="0" y="0" width="0" height="0" fill="var(--navy)" rx="4" opacity="0"/>
+          <text id="mapTooltipText" x="0" y="0" font-size="9" fill="white" font-family="sans-serif" opacity="0"></text>
+        </svg>
+      </div>
+      <div class="reveal-right">
+        <h3 style="color:var(--navy);margin-bottom:1rem;">Key locations across the county</h3>
+        <div class="map-legend">
+          <div class="map-legend-item"><div class="map-legend-dot" style="background:#991b1b;"></div> Safety &amp; Emergency Services</div>
+          <div class="map-legend-item"><div class="map-legend-dot" style="background:#065f46;"></div> Health &amp; Medical</div>
+          <div class="map-legend-item"><div class="map-legend-dot" style="background:#1e40af;"></div> Education &amp; Libraries</div>
+          <div class="map-legend-item"><div class="map-legend-dot" style="background:#92400e;"></div> Food &amp; Transportation</div>
+          <div class="map-legend-item"><div class="map-legend-dot" style="background:#5b21b6;"></div> Youth Programs</div>
+          <div class="map-legend-item"><div class="map-legend-dot" style="background:#0369a1;"></div> Legal Aid</div>
+          <div class="map-legend-item"><div class="map-legend-dot" style="background:#e8a020;"></div> Senior Services</div>
+        </div>
+        <div id="mapInfo" style="margin-top:1.5rem;background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:1.25rem;min-height:80px;transition:all .3s;">
+          <p style="color:var(--gray-500);font-size:.85rem;font-style:italic;">Hover or tap a marker on the map to see resource details.</p>
+        </div>
+        <a href="directory.html" class="btn btn-primary" style="margin-top:1rem;">Browse Full Directory →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TESTIMONIALS ══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Community Voices</span>
+      <h2>Real residents, real impact</h2>
+      <p>Stories from the people this hub is built to serve.</p>
+    </div>
+    <div class="testimonial-grid stagger-children">
+      <div class="testimonial-card reveal">
+        <p>I moved to Apex from Mexico City six months ago. I didn't know where to find a doctor who accepted our insurance. Within two minutes on this site, I found the StepUp Ministry clinic and a GoApex bus route to get there. It was life-changing for our family.</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">👩</div>
+          <div>
+            <div class="testimonial-name">Maria G.</div>
+            <div class="testimonial-role">New Apex resident, Holly Springs area</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <p>When my grandmother moved in with us, we were overwhelmed trying to find senior transportation for her medical appointments. The hub showed me Wake County Community Transportation on the first search. She's been using it every week since.</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">👨</div>
+          <div>
+            <div class="testimonial-name">David K.</div>
+            <div class="testimonial-role">Apex resident, caregiver</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <p>I'm a single dad and my son needed after-school tutoring. I had no idea Wake County Libraries offered free homework help. We got him a library card the same day. He goes every Tuesday now — completely free.</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">👨‍👦</div>
+          <div>
+            <div class="testimonial-name">James T.</div>
+            <div class="testimonial-role">Apex parent, downtown area</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2rem;font-size:.82rem;color:var(--gray-500);">Stories are representative of real community experiences. Names anonymized for privacy.</p>
+  </div>
+</section>
+
+<!-- ══════════════ FEATURED PREVIEW ══════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Featured Resources</span>
+      <h2>Essential services for our community</h2>
+      <p>These organizations are among the most impactful and widely used in Apex and Wake County.</p>
+    </div>
+    <div class="resource-grid stagger-children">
+      <article class="resource-card reveal" data-category="health">
+        <div class="resource-card-img">
+          <img data-src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&q=70&auto=format&fit=crop" alt="WakeMed Hospital entrance" loading="lazy" />
+        </div>
+        <div class="resource-card-header">
+          <div class="resource-icon" style="background:#d1fae5;">🏥</div>
+          <span class="tag tag-health">Health</span>
+        </div>
+        <div class="resource-card-body">
+          <h3>WakeMed Health &amp; Hospitals</h3>
+          <p>Wake County's largest health system providing emergency care, specialty medicine, and community wellness programs to over a million residents.</p>
+          <div class="resource-meta">
+            <span>📍 Raleigh &amp; Cary, Wake County</span>
+            <span>📞 (919) 350-8000</span>
+          </div>
+        </div>
+        <div class="resource-card-footer">
+          <span class="tag tag-health">Essential</span>
+          <a href="featured.html#wakemed" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="resource-card reveal" data-category="education">
+        <div class="resource-card-img">
+          <img data-src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&q=70&auto=format&fit=crop" alt="Public library interior with bookshelves" loading="lazy" />
+        </div>
+        <div class="resource-card-header">
+          <div class="resource-icon" style="background:#dbeafe;">📚</div>
+          <span class="tag tag-education">Education</span>
+        </div>
+        <div class="resource-card-body">
+          <h3>Wake County Public Libraries</h3>
+          <p>A network of 20+ branch libraries offering free books, digital resources, homework help, and community programs for all ages.</p>
+          <div class="resource-meta">
+            <span>📍 Multiple locations across Wake County</span>
+            <span>📞 (919) 250-1200</span>
+          </div>
+        </div>
+        <div class="resource-card-footer">
+          <span class="tag tag-education">Essential</span>
+          <a href="featured.html#libraries" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="resource-card reveal" data-category="safety">
+        <div class="resource-card-img">
+          <img data-src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=70&auto=format&fit=crop" alt="Police officer in community" loading="lazy" />
+        </div>
+        <div class="resource-card-header">
+          <div class="resource-icon" style="background:#fee2e2;">🛡️</div>
+          <span class="tag tag-safety">Safety</span>
+        </div>
+        <div class="resource-card-body">
+          <h3>Apex Police Department</h3>
+          <p>Community-focused policing with neighborhood safety programs, school resource officers, and around-the-clock emergency response.</p>
+          <div class="resource-meta">
+            <span>📍 53 Hunter Street, Apex, NC 27502</span>
+            <span>📞 (919) 362-8661</span>
+          </div>
+        </div>
+        <div class="resource-card-footer">
+          <span class="tag tag-safety">Essential</span>
+          <a href="featured.html#police" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="featured.html" class="btn btn-outline">View All Featured Resources →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ WHY THIS HUB ══════════════ -->
+<section class="section section-sky">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div class="reveal-left">
+        <span class="label">About This Project</span>
+        <h2>Built by Apex students, <em>for</em> our neighbors</h2>
+        <p style="margin:.8rem 0 1rem;">The Apex Community Hub was created by six students from Apex High School for the 2026 Technology Student Association Webmaster competition. We wanted to build something that actually helps people in our community—not just a demo site.</p>
+        <p>We researched real local organizations, verified contact information, and designed the site to be accessible for everyone: students, families, new residents, and seniors alike.</p>
+        <div style="display:flex;gap:1rem;margin-top:1.75rem;">
+          <a href="about.html" class="btn btn-primary">Meet the Team</a>
+          <a href="brief.html" class="btn btn-outline">Design Brief</a>
+        </div>
+      </div>
+      <div class="reveal-right" style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;">
+          <span style="font-size:1.6rem;">✅</span>
+          <div>
+            <strong style="color:var(--navy);font-size:.95rem;">Verified Information</strong>
+            <p style="font-size:.82rem;margin:0;">Every listing has been manually researched and checked for accuracy.</p>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;">
+          <span style="font-size:1.6rem;">🔍</span>
+          <div>
+            <strong style="color:var(--navy);font-size:.95rem;">Easy to Search &amp; Filter</strong>
+            <p style="font-size:.82rem;margin:0;">Find what you need instantly by keyword, category, or A–Z sort. Press <kbd>/</kbd> anytime.</p>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;">
+          <span style="font-size:1.6rem;">🤝</span>
+          <div>
+            <strong style="color:var(--navy);font-size:.95rem;">Community-Driven</strong>
+            <p style="font-size:.82rem;margin:0;">Anyone can submit a resource suggestion for review.</p>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;">
+          <span style="font-size:1.6rem;">🖨️</span>
+          <div>
+            <strong style="color:var(--navy);font-size:.95rem;">Print-Ready for Offline Use</strong>
+            <p style="font-size:.82rem;margin:0;">Print the directory for seniors or anyone without internet access — clean layout included.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA ══════════════ -->
+<section class="section" style="text-align:center;background:var(--navy);">
+  <div class="container">
+    <h2 style="color:#fff;">Ready to explore?</h2>
+    <p style="max-width:480px;margin:.75rem auto 2rem;color:rgba(255,255,255,.75);">Browse 22+ verified local resources, view upcoming community events, or submit a resource we may have missed.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="directory.html" class="btn btn-gold">Browse All Resources →</a>
+      <a href="events.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff;">Community Events</a>
+      <a href="submit.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff;">Submit a Resource</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="margin-bottom:.75rem;">
+          <div class="logo-icon" aria-hidden="true">🏛</div>
+          <div>
+            <span class="logo-text">Apex Community Hub</span>
+            <span class="logo-sub" style="color:rgba(255,255,255,.5);">Apex &amp; Wake County, NC</span>
+          </div>
+        </a>
+        <p>A community resource directory created by students at Apex High School for the 2026 TSA Webmaster competition.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Resource Directory</a>
+        <a href="featured.html">Featured Resources</a>
+        <a href="events.html">Events &amp; Programs</a>
+        <a href="submit.html">Submit a Resource</a>
+        <a href="about.html">About the Team</a>
+        <a href="brief.html">Design Brief</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="directory.html?filter=safety">Safety &amp; Emergency</a>
+        <a href="directory.html?filter=education">Education</a>
+        <a href="directory.html?filter=health">Health &amp; Wellness</a>
+        <a href="directory.html?filter=transport">Transportation</a>
+        <a href="directory.html?filter=youth">Youth Programs</a>
+        <a href="directory.html?filter=social">Social Services</a>
+        <a href="directory.html?filter=legal">Legal Aid</a>
+      </div>
+      <div class="footer-col">
+        <h4>Local Government</h4>
+        <a href="https://www.apexnc.org" target="_blank" rel="noopener">Town of Apex</a>
+        <a href="https://www.wake.gov" target="_blank" rel="noopener">Wake County</a>
+        <a href="https://www.raleighnc.gov" target="_blank" rel="noopener">City of Raleigh</a>
+        <a href="https://www.townofcary.org" target="_blank" rel="noopener">Town of Cary</a>
+        <a href="https://www.ncdhhs.gov" target="_blank" rel="noopener">NC DHHS</a>
+        <a href="https://www.nc211.org" target="_blank" rel="noopener">NC 211 (Dial 2-1-1)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Apex Community Hub · Apex High School TSA Webmaster Team</span>
+      <span>Created for the NC TSA National Leadership Conference · <a href="brief.html">Design Brief</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Map tooltip overlay -->
+<div class="map-tooltip" id="mapTooltip" role="tooltip" aria-live="polite"></div>
+
+<script src="main.js"></script>
+<script src="enhancements.js"></script>
+</body>
+</html>
