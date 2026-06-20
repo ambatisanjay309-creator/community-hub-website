@@ -3,7 +3,7 @@
    Service Worker: caches all pages and assets for offline use
    ============================================================ */
 
-const CACHE_NAME = 'apex-hub-v1';
+const CACHE_NAME = 'apex-hub-v2';
 
 const PRECACHE = [
   '/',
